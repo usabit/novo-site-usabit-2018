@@ -1,0 +1,43 @@
+lineHeights = 10 11 12 13 14 15 16 17 18 19 20
+for num in lineHeights {
+    .line-height-{num} { line-height: unit(num * 0.1, em); }
+}
+
+sizes = 0 4 5 8 10 12 15 16 20 24 25 30 32 35 40 45 50 55 60 65 70 75 80
+for num in sizes {
+    .m-{num} { margin: unit(num, px) !important; }
+    .mt-{num} { margin-top: unit(num, px) !important; }
+    .mr-{num} { margin-right: unit(num, px) !important; }
+    .mb-{num} { margin-bottom: unit(num, px) !important; }
+    .ml-{num} { margin-left: unit(num, px) !important; }
+
+    .mtb-{num},
+    .my-{num} {
+        margin-top: unit(num, px) !important;
+        margin-bottom: unit(num, px) !important;
+    }
+
+    .mlr-{num},
+    .mx-{num} {
+        margin-left: unit(num, px) !important;
+        margin-right: unit(num, px) !important;
+    }
+
+    .p-{num} { padding: unit(num, px) !important; }
+    .pt-{num} { padding-top: unit(num, px) !important; }
+    .pr-{num} { padding-right: unit(num, px) !important; }
+    .pb-{num} { padding-bottom: unit(num, px) !important; }
+    .pl-{num} { padding-left: unit(num, px) !important; }
+
+    .ptb-{num},
+    .py-{num} {
+        padding-top: unit(num, px) !important;
+        padding-bottom: unit(num, px) !important;
+    }
+
+    .plr-{num},
+    .px-{num} {
+        padding-left: unit(num, px) !important;
+        padding-right: unit(num, px) !important;
+    }
+}

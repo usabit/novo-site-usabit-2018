@@ -1,0 +1,11 @@
+.DS_Store
+.sass-cache
+.jekyll-metadata
+.jsbeautifyrc
+package-lock.json
+
+*.map
+
+/node_modules
+/assets
+/_site

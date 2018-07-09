@@ -1,0 +1,38 @@
+{
+    "name": "usabit-site-2018",
+    "version": "1.0.0",
+    "description": "Novo site Usabit 2018",
+    "main": "index.js",
+    "browserslist": [
+        "> 1%",
+        "ie > 9"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "gulp"
+    },
+    "author": "Usabit Team",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer-stylus": "^0.14.0",
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.1.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^5.4.0",
+        "gulp-imagemin": "^4.1.0",
+        "gulp-plumber": "^1.2.0",
+        "gulp-replace": "^0.6.1",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-stylus": "^2.6.0",
+        "gulp-uglify": "^3.0.0",
+        "gulp-watch": "^5.0.0",
+        "jeet": "^7.1.0",
+        "nib": "^1.1.2",
+        "run-sequence": "^2.2.1",
+        "rupture": "^0.6.2"
+    },
+    "dependencies": {
+        "jquery": "^3.3.1"
+    }
+}

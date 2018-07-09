@@ -1,0 +1,22 @@
+flex-version = flex
+support-for-ie = true
+vendor-prefixes = official
+
+@import 'nib'
+@import 'rupture'
+@import 'jeet'
+
+rupture.scale =        0        400px       600px       800px       1050px     1350px
+//                     └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────
+// Slice numbers:           1           2           3           4           5           6
+rupture.scale-names =      'xs'        'sm'        'md'        'lg'        'xl'        'hd'
+
+global-reset()
+
+@-ms-viewport{
+    width: device-width;
+}
+
+@import "_definitions/*";
+// @import "_partials/*";
+// @import "_pages/*";
