@@ -1,0 +1,64 @@
+.btn {
+	font-size: 14px;
+	border-radius: 0;
+	color: #000;
+	cursor: pointer;
+	transition: all .2s ease-out;
+	display: inline-block;
+	+below('sm'){
+		display: block;
+	}
+	&.white {
+		border: 0;
+		padding: 15px 30px;
+		background: white;
+		color: #333333;
+		letter-spacing: 1px;
+		&:hover {
+			background: @background - 15%;
+		}
+	}
+	&.outline-white {
+		border: 1px solid white;
+		padding: 15px 30px;
+		background: $mainColor;
+		color: white !important;
+		letter-spacing: 1px;
+		&:hover {
+			border: white;
+			background: white;
+			color: $mainColor !important;
+		}
+	}
+	&.white {
+		border: 0;
+		padding: 15px 30px;
+		background: #80B258;
+		color: white;
+		letter-spacing: 1px;
+		&:hover {
+			background: @background - 15%;
+		}
+	}
+	&.blue {
+		border: 0;
+		padding: 15px 30px;
+		background: #3BA0E5;
+		color: white;
+		letter-spacing: 1px;
+		&:hover {
+			background: @background - 15%;
+		}
+	}
+	&.black {
+		padding: 15px 30px;
+		background: none;
+		border: 1px solid #000;
+		font-weight: 600;
+		color: #000;
+		&:hover {
+			background: #000;
+			color: #fff;
+		}
+	}
+}
