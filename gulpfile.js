@@ -24,7 +24,8 @@ gulp.task('stylus', function() {
             compress: true
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./assets/css'));
+        .pipe(gulp.dest('./assets/css'))
+        .pipe(connect.reload());
 });
 
 gulp.task('svg', function() {
@@ -40,7 +41,8 @@ gulp.task('imagemin', ['svg'], function() {
             progressive: true,
             interlaced: true
         }))
-        .pipe(gulp.dest('./assets/img/'));
+        .pipe(gulp.dest('./assets/img/'))
+        .pipe(connect.reload());
 });
 
 gulp.task('js', function() {
@@ -69,8 +71,8 @@ gulp.task('sequence', function(callback) {
 
 gulp.task('watch', function() {
     gulp.watch('./_assets/css/**/*.styl', ['stylus']);
-    gulp.watch('./_assets/img/sprite/*.*', ['sprite']);
     gulp.watch('./_assets/img/**/*.{jpg,png,gif}', ['imagemin']);
+    gulp.watch('./_assets/js/**/*.js', ['js']);
     gulp.watch('./index.html', ['reload']);
 });
 
@@ -81,6 +83,7 @@ gulp.task('reload', function() {
 
 gulp.task('default', ['sequence'], function() {
     connect.server({
+        port: 8888,
         livereload: true
     });
 });
