@@ -2,59 +2,59 @@
 	font-size: 1.8rem; // 18/10px = 1.8rem
 	padding: 0.83em 1.66em; // 15/18px = .83em e 30/18px = 1.66em
 	border-radius: 3px;
-	color: #000;
+	color: black;
 	cursor: pointer;
 	transition: all .2s ease-out;
 	display: inline-block;
+    text-align: center;
 	+below('sm'){
 		display: block;
 	}
 	&.white {
-		border: 0;
+		border: 1px solid white;
 		background: white;
-		color: #333333;
+		color: $text-secondary;
 		letter-spacing: 1px;
 		&:hover {
 			background: @background - 15%;
+			border-color: @background;
 		}
 	}
 	&.outline-white {
 		border: 1px solid white;
-		background: $mainColor;
-		color: white !important;
+		background: transparent;
+		color: white;
 		letter-spacing: 1px;
 		&:hover {
-			border: white;
+			border-color: white;
 			background: white;
-			color: $mainColor !important;
+			color: $text-secondary;
 		}
 	}
-	&.white {
-		border: 0;
-		background: #80B258;
+	&.green {
+		border: 1px solid $color-positive;
+		background: $color-positive;
 		color: white;
 		letter-spacing: 1px;
 		&:hover {
 			background: @background - 15%;
+			border-color: @background;
 		}
 	}
 	&.blue {
-		border: 0;
-		background: #3BA0E5;
+		border: 1px solid $secondary-color;
+		background: $secondary-color;
 		color: white;
 		letter-spacing: 1px;
 		&:hover {
 			background: @background - 15%;
+			border-color: @background;
 		}
 	}
 	&.black {
-		background: none;
-		border: 1px solid #000;
+		border: 1px solid black;
+		background-color: black;
 		font-weight: 600;
-		color: #000;
-		&:hover {
-			background: #000;
-			color: #fff;
-		}
+		color: white;
 	}
 }

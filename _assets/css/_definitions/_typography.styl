@@ -63,13 +63,16 @@ h5{
     font-size: 1.6rem;
 }
 a{
-    cursor pointer
-    display inline-block
-    text-decoration none
-    transition all 250ms
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #3BA0E5;
+    text-decoration: none;
+    transition: all 250ms;
     &:hover,
     &.active,
     &:active{
         transition: all 250ms;
+        color: @color - 15%;
     }
 }
