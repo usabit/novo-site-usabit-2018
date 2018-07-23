@@ -322,3 +322,98 @@
         }
     }
 }
+
+// Contact Bar
+
+.contact-bar{
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .contact {
+            &-business,
+            &-office{
+                display: flex;
+                align-items: center;
+                .contact-info-title{
+                    font-size: 1.6rem;
+                    margin-right: 15px;
+                    @media(max-width: 1024px){
+                        margin-right: 10px;    
+                    }
+                    i {
+                        margin-right: 10px;
+                        @media(max-width: 1024px){
+                            margin-right: 5px;    
+                        }
+                    }
+                }
+                p.contact-info-number{
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    color: $primary-color;
+                    @media(max-width: 1024px){
+                        display: none;
+                    }
+                }
+                a.contact-info-number{
+                    display: none;
+                    @media(max-width: 1024px){
+                        display: inline-block;
+                        font-size: 1.6rem;
+                        color: $primary-color;
+                    }
+                }
+                @media(max-width: 1024px){
+                    margin-bottom: 20px;
+                } 
+            }
+            &-business{
+                flex-basis: 35%;  
+            }
+            &-office{
+                flex-basis: 25%;  
+            }
+            &-social-network{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex: 1;
+                a{
+                    width: 40px;
+                    height 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    background-color: $text-primary;
+                    i{
+                        color: white;
+                        font-size: 2rem;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &:hover,
+                    &:active {
+                        background-color: $text-secondary;
+                    }
+                    @media(max-width: 1024px){
+                        width: 35px;
+                        height 35px;
+                        i{
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }        
+        @media(max-width: 1024px){
+            flex-direction: column;
+        }
+    }
+}
