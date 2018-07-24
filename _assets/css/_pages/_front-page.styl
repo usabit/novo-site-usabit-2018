@@ -46,51 +46,50 @@
             align-items: center;
             border-radius: 3px;
             margin: 0 10px 0 0;
-            padding: 30px;
+            padding: 20px;
             &:nth-child(1){
                 background: linear-gradient(to right, #1257BF , #3B7BDC);
+                +below('mobile'){
+                    margin: 0 10px 10px 0;
+                }
             }
             &:nth-child(2){
                 background: linear-gradient(to right, #6B63CC , #7D8AB8);
-                +below(430px){
-                    margin-right: 0;
+                +below('mobile'){
+                    margin: 0 0 10px 0;
                 }
             }
             &:nth-child(3){
                 background: linear-gradient(to right, #3BBCE5 , #53B3F5);
+                +below('mobile'){
+                    margin: 0 10px 0 0;
+                }
             }
             &:nth-child(4){
                 margin-right: 0;
                 background: linear-gradient(to right, #3BA0E5 , #53B3F5);
-                +below(430px){
-                    margin-bottom: 0;
+                +below('mobile'){
+                    margin: 0 0 0 0;
                 }
             }
             p {
-                font-size: 1.8rem;
+                font-size: 2.4rem;
                 color: white;
                 text-align: left;
-                +below(1299px){
-                    font-size: 1.5rem;
+                +below('mobile'){
+                    font-size: 1.6rem;
+                    transform: translateY(50px);
                 }
             }
             +below(860px){
                 margin-bottom: 10px;
             }
-            /*
-            @media(max-width: 430px){
-                width: 45%;
+            +below('mobile'){
+                display: inline-block;
+                min-width: auto;
+                width: 48%;
                 height: 0;
-                padding-bottom: 45%;
-            }
-            */
-            +below(440px){
-                width: 100%;
-                height: @width;
-                margin-right: 0;
-                &:last-child{
-                    margin-bottom: 0;
-                }
+                padding: 10px 10px @width;
             }
         }
         +below(860px){
@@ -271,6 +270,7 @@
                 align-items: flex-start;
                 height: 150px;
                 padding: 20px;
+                cursor: pointer;
                 &:hover {
                     -moz-box-shadow:    inset 0 0 0 1px $primary-color;
                     -webkit-box-shadow: inset 0 0 0 1px $primary-color;
