@@ -28,14 +28,16 @@
 // Services
 
 .services{
-    display: inline-block;
+    border: 1px solid blue;
     width: 100%;
     .wrapper {
-        transform: translateY(-50%);
+        /*transform: translateY(-50%);*/
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
+        margin-top: -90px;
+        margin-bottom: 50px;
         .box-services {
             /* background-image: linear-gradient(65deg, #ffffff90, #ffffff00); */
             min-width: 180px;
@@ -78,13 +80,12 @@
                 font-size: 2.4rem;
                 color: white;
                 text-align: left;
+                /*
                 +below(440px){
                     font-size: 1.6rem;
                     transform: translateY(50px);
                 }
-            }
-            +below(860px){
-                margin-bottom: 10px;
+                */
             }
             +below(440px){
                 display: inline-block;
@@ -95,10 +96,10 @@
             }
         }
         +below(860px){
-            transform: translateY(-90px);    
+            //transform: translateY(-90px);    
         }
         +below(440px){
-            justify-content: center;
+            //justify-content: center;
         }
     }
 }
