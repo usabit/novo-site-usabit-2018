@@ -38,6 +38,7 @@
         align-items: center;
         flex-wrap: wrap;
         .box-services {
+            /* background-image: linear-gradient(65deg, #ffffff90, #ffffff00); */
             min-width: 180px;
             width: 180px;
             height: 180px;
@@ -47,6 +48,7 @@
             border-radius: 3px;
             margin: 0 10px 0 0;
             padding: 20px;
+            /*
             &:nth-child(1){
                 background: linear-gradient(to right, #1257BF , #3B7BDC);
                 +below(440px){
@@ -72,6 +74,7 @@
                     margin: 0 0 0 0;
                 }
             }
+            */
             p {
                 font-size: 2.4rem;
                 color: white;
@@ -110,10 +113,6 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background-image: url("../img/background/portal-completo.jpg");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
         p{
             max-width: 392px;
             font-size: 2.6rem;
@@ -136,7 +135,7 @@
         color: white;
         font-size: 2.6rem;
         max-width: 820px;
-        margin: 30px auto 67px 0;
+        margin: 73px auto 97px 0;
         +below('small-tablet'){
             margin-bottom: 45px;    
         }
@@ -158,15 +157,15 @@
                 font-size: 2rem;
             }
             h3{
-                margin: 40px auto 20px auto;
+                margin: 63px auto 20px auto;
                 +below('small-tablet'){
                     margin: 20px auto;
                 }
             }
             p{
+                margin-bottom: 10px;
                 +below('small-tablet'){
                     font-size: 1.6rem;
-                    line-height: 1.3;
                 }
             }
             +below(500px){
@@ -431,11 +430,12 @@
             }
             h2{
                 font-size: 1.6rem;
+                max-width: 190px;
             }
             ul{
                 li{
                     font-size: 1.6rem;
-                    margin-bottom: 10px;
+                    margin-bottom: 8px;
                     &:last-child{
                         margin-bottom: 0;
                     }
