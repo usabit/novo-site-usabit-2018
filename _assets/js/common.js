@@ -15,4 +15,18 @@
         $('html').css('overflow', 'initial');
     });
 
+    /* front-page .box-services
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() >= 430) {
+            $('.box-services').css({
+              zIndex: 0
+            });
+        } else {
+            $('.box-services').css({
+                zIndex: 2
+            });
+        }
+    });
+    */
+
 })(jQuery, window, document);
