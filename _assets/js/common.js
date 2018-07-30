@@ -15,7 +15,7 @@
         $('html').css('overflow', 'initial');
     });
 
-    // Effect fadeOut
+    /* Effect fadeOut
     $(window).scroll(function() {
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if(scrollTop > 420){
@@ -34,6 +34,28 @@
                 }
             }
         });
+    });
+    */
+
+    // Navbar scroll animação
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 0) {
+            $('header.site-header').css({
+                transition: 'all 500ms',
+                background: '#1c1c1c',
+                //backgroundImage: 'url("assets/img/background/banner-header.jpg")',
+                //backgroundRepeat: 'no-repeat',
+                //backgroundPosition: 'center center',
+                //backgroundSize: 'cover',
+                color: '#ffffff'
+            });
+        } else {
+            $('header.site-header').css({
+                transition: 'all 500ms',
+                background: 'transparent',
+                color: '#1c1c1c'
+            });
+        }
     });
 
 })(jQuery, window, document);
