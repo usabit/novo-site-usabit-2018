@@ -40,7 +40,6 @@
 $box-services-margin = 9;
 
 .services{
-    border: 1px solid blue;
     width: 100%;
     min-height: 150px;
     .wrapper {
@@ -78,9 +77,6 @@ $box-services-margin = 9;
                 width: 47%;
                 height: 0;
                 padding: (@width / 2);
-                &:nth-last-child(-n+2){
-                    margin-bottom: 0;
-                }
                 column(1/2, $cycle: 2)
             }
         }
@@ -252,6 +248,9 @@ $box-services-margin = 9;
                 }
                 p{
                     font-size: 1.6rem;
+                }
+                +below('mobile'){
+                    justify-content: center;
                 }
             }
             +below('tablet'){
