@@ -1,0 +1,14 @@
+title-template (títulos com linha azul) devem ser font-weight 200
+Made in Usabit - Margin bottom menor do que no figma (faltam 15px)
+Made in Usabit - A fonte que está dentro da imagem deve ter font-weight 200
+Tecnologia & você - box - h3 está com font-weight maior do que no figma
+Tecnologia & você - box - p está com line-height menor do que no figma
+Pre Footer - Telefones - Acho que a disposição dos telefones não está certa. Deveria fazer com margin-right no lugar de flex-basis
+Footer - Links - O font weight não está certo, segindo o figma, deveria ser 400 (Regular)
+
+Responsivo
+Criamos um portal completo (...) - perguntar pro Rafael se esse banner vai se manter no mobile. Sem imagem o banner fica sem propósito.
+Desenvolvemos o que você quiser - no Mobile L (425px) a margem de "Mundo dos aplicativos" para a imagem do notebook, está maior do que "Corporativo e Negócios para a proxima imagem
+Made in Usabit - Posts não tem mais necessidade de ter min-height e pode se moldar ao conteúdo.
+Tecnologia & você - Perguntar ao Rafael se ele acha que tem necessidade de criar um divisor entre o "Mais sobre tecnologia" e os telefones.
+
