@@ -73,11 +73,11 @@ gulp.task('watch', function() {
     gulp.watch('./_assets/css/**/*.styl', ['stylus']);
     gulp.watch('./_assets/img/**/*.{jpg,png,gif}', ['imagemin']);
     gulp.watch('./_assets/js/**/*.js', ['js']);
-    gulp.watch('./index.html', ['reload']);
+    gulp.watch('./*.html', ['reload']);
 });
 
 gulp.task('reload', function() {
-    gulp.src(['./assets/**/*', 'index.html'])
+    gulp.src(['./assets/**/*', '*.html'])
         .pipe(connect.reload());
 });
 
