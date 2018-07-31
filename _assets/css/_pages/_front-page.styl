@@ -177,6 +177,9 @@ $box-services-margin = 9;
             }
             +below('mobile'){
                 margin-bottom: 35px;
+                &:nth-child(1){
+                    margin-bottom: 10px;
+                }
                 &:last-child{
                     margin-bottom: 0;
                 }
@@ -221,7 +224,7 @@ $box-services-margin = 9;
                     left: 30px;
                     p{
                         font-size: 3rem;
-                        font-weight: 300;
+                        font-weight: 200;
                         color: #FFFFFF;
                     }
                 }
@@ -250,7 +253,7 @@ $box-services-margin = 9;
                     font-size: 1.6rem;
                 }
                 +below('mobile'){
-                    justify-content: center;
+                    min-height: initial;
                 }
             }
             +below('tablet'){
@@ -294,14 +297,16 @@ $box-services-margin = 9;
             h3,
             p{
                 color: #828282;
-                font-weight: 500;
+                //font-weight: 500;
             }
             h3{
                 font-size: 1.6rem;
+                font-weight: 400;
                 margin-bottom: 10px;
             }
             p{
                 font-size: 2.5rem;
+                font-weight: 500;
                 +below('tablet'){
                     font-size: 2rem;
                 }
@@ -390,7 +395,10 @@ $box-services-margin = 9;
                 } 
             }
             &-business{
-                flex-basis: 35%;  
+                margin-right: 76px;        
+                +below('tablet'){
+                    margin-right: 0;
+                }
             }
             &-office{
                 flex-basis: 25%;  
@@ -463,12 +471,13 @@ $box-services-margin = 9;
             &-list{
                 li{
                     font-size: 1.4rem;
-                    font-weight: 500;
+                    font-weight: 400;
                     color: black;
                     line-height: 1.2;
                     margin-bottom: 8px;
                     a{
                         font-size: @font-size;
+                        font-weight: @font-weight;
                         color: @color;
                         line-height: @line-height;
                     }
