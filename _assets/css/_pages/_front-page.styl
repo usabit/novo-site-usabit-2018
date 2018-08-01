@@ -199,20 +199,20 @@ $box-services-margin = 9;
     padding-bottom: 50px;
     .wrapper{
         a.post-card{
+            display: inline-block;
             background-color: white;
-            width: 417px;
+            width: 418px;
             column(1/3, $cycle: 3);
             figure{
+                display: block;
                 position: relative;
-                display: inline-block;
                 width: 100%;
                 img.post-thumbnail{
-                    display: block;
-                    width: @width;
-                    height: 262px;
-                    +below('tablet'){
-                        height: auto;
-                    }
+                    width: 100%;
+                    /*  418x262
+                        Valor padrão definido no functions.php
+                        do WordPress com base na imagem do Figma!
+                    */
                 }
                 figcaption { 
                     position: absolute;
@@ -233,6 +233,7 @@ $box-services-margin = 9;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
+                flex: 1;
                 padding: 30px;
                 h3,
                 p{
