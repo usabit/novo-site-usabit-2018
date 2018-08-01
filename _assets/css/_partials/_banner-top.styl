@@ -1,4 +1,4 @@
-// BannerTop Component
+// BannerTop Partials
 
 .banner-top{
     display: flex;
@@ -27,18 +27,22 @@
             display: @display;
             justify-content: @justify-content;
             align-items: @align-items;
+            flex-wrap: wrap;
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
             li{
                 margin-right: 10px;
-                &:last-child{
+                // penúltimo
+                &:nth-last-of-type(-n +2):not(:last-child) a{
                     margin-right: 0;
                 }
+                &:last-child{
+                    display: none;
+                }
                 a{
-                    display: block;
-                    text-align: center;
+                    display: inline-block;
                     text-decoration: none;
                 }
             }
