@@ -4,36 +4,112 @@
 .single-post{
     .wrapper{
         .single-post-content{
-            border: 1px dashed blue;
+            //border: 1px dashed blue;
             max-width: 1024px;
-            .spc-date-and-comment{}
-            .spc-title{}
-            .spc-subtittle{}
-            .spc-paragraph{}
-            .spc-tags{}
-            .spc-campaign-banner{}
-            .spc-content-banner{}
+            .spc-date-and-comment,
+            .spc-tags{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                list-style-type: none;
+                li{
+                    a{
+                        font-size: 1.8rem;
+                        font-weight: 300;
+                        line-height: 1.2;
+                        color: #3BA0E5;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            .spc-date-and-comment{
+                margin-top: 56px;
+                margin-bottom: 7px;
+                li{
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                    color: #000000;
+                    line-height: 1.2;
+                    margin-right: 21px;
+                }
+            }
+            .spc-tags{
+                margin-top: 24px;
+                margin-bottom: 39px;
+                li{
+                    margin-right: 16px;
+                }
+            }
+            .spc-title{
+                max-width: 613px;
+                font-size: 4rem;
+                font-weight: 300;
+                margin-left: -2px;
+            }
+            .spc-subtitle,
+            .spc-paragraph{
+                max-width: 768px;
+                font-size: 1.8rem;                
+                color: #000000;
+            }
+            .spc-subtitle{                
+                font-weight: 900;
+            }
+            .spc-paragraph{
+                font-weight: 300;
+            }
+            .spc-campaign-banner{
+                //max-width: 1016px;
+                min-height: 118px;
+                margin-top: 45px;
+                margin-bottom: 65px;
+            }
+            .spc-content-banner{
+                max-width: 768px;
+                margin-top: 55px;
+                margin-bottom: 70px;
+                figcaption{
+                    font-size: 1.6rem;
+                    font-style: italic;
+                    font-weight: 300;
+                    color: #000000;
+                    margin-top: 10px;
+                }
+            }
             .spc-author{
                 border-top: 1px solid #BDBDBD;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
+                padding-top: 29px;
+                margin-top: 50px;
+                margin-bottom: 29px;
                 .spc-author-avatar{
-                    width: 200px;
-                    height: 200px;
+                    width: 70px;
+                    height: 70px;
                     margin-right: 22px;
                     border-radius: 50%;
                 }
                 .spc-author-info{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
                     flex: 1;
-                    &-name{}
-                    &-profession{}
+                    &-name,
+                    &-profession{
+                        color: #000000;
+                    }
+                    &-name{
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        margin-bottom: 3px;
+                    }
+                    &-profession{
+                        font-size: 1.4rem;
+                        font-style: italic;
+                        line-height: 1.2;
+                    }
                 }
             }
         }
-    }    
+    }
 }
