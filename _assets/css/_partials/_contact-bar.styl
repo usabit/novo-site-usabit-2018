@@ -1,0 +1,98 @@
+
+// Contact Bar
+.contact-bar{
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    padding-top: 59px;
+    padding-bottom: 30px;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .contact {
+            &-business,
+            &-office{
+                display: flex;
+                align-items: center;
+                .contact-info-title{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    margin-right: 17px;
+                    +below('tablet'){
+                        margin-right: 10px;    
+                    }
+                    i {
+                        margin-right: 12px;
+                        +below('tablet'){
+                            margin-right: 5px;    
+                        }
+                    }
+                }
+                p.contact-info-number,
+                a.contact-info-number {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: #2D9CDB;
+                }
+                p.contact-info-number{
+                    display: inline-block;
+                    +below('tablet'){
+                        display: none;
+                    }
+                }
+                a.contact-info-number{
+                    display: none;
+                    +below('tablet'){
+                        display: inline-block;
+                    }
+                }
+                +below('tablet'){
+                    margin-bottom: 20px;
+                } 
+            }
+            &-business{
+                margin-right: 76px;        
+                +below('tablet'){
+                    margin-right: 0;
+                }
+            }
+            &-office{
+                flex-basis: 25%;  
+            }
+            &-social-network{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex: 1;
+                a{
+                    width: 26px;
+                    height: 26px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 13px;
+                    border-radius: 50%;
+                    background-color: #bebebe;
+                    i{
+                        color: white;
+                        font-size: 1.4rem;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &:hover,
+                    &:active {
+                        background-color: @background-color - 30%;
+                    }
+                }
+            }
+        }        
+        +below('tablet'){
+            flex-direction: column;
+        }
+    }       
+    +below('mobile'){
+        padding-top: 0;
+    }
+}
