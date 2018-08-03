@@ -69,76 +69,108 @@
         }
     }
 }
+// Simple Card ( variations )
+.section.simple-card.simple-card-blog {
+    padding-top: 0;
+    .simple-card-boxes{
+        margin-top: 0;
+    }
+}
 
 // Medium Card
 .medium-card{}
 
 // Full Card
 .full-card{
-    display: inline-block;
+    display: inline-block;    
     width: 100%;
     background-color: white;
     padding-top: 50px;
     padding-bottom: 50px;
-    .call-to-posts-boxes {
-        display: inline-block;
-        width: 100%;
-        margin-top: 4.4rem;
-        .call-box-post,
-        .call-box-post__more-about {
-            background-color: white;
-            min-height: 150px;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        .full-card-box {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            padding: 20px;
-            &:nth-child(-n+2){
-                margin-bottom: 3%;
+            justify-content: space-between;
+            flex-basis: 33.33333%;
+            background-color: white;
+            margin-right: 25px;
+            &:last-child{
+                margin-right: 0;
             }
-            column(1/2, $cycle: 2);
-            h3,
-            p{
-                color: #828282;
-            }
-            h3{
-                font-size: 1.6rem;
-                font-weight: 400;
-                margin-bottom: 10px;
-            }
-            p{
-                font-size: 2.5rem;
-                font-weight: 500;
-                +below('tablet'){
-                    font-size: 2rem;
-                }
-            }
-            +below('mobile'){
-                margin-bottom: 3%;
-                column(1, $cycle: 1);
-                &:last-child{
-                    margin-bottom: 0;
-                }
-            }
-        }
-        .call-box-post{
-            border: 1px solid $primary-color;
             &:hover {
                 -moz-box-shadow:    inset 0 0 0 1px $primary-color;
                 -webkit-box-shadow: inset 0 0 0 1px $primary-color;
                 box-shadow:         inset 0 0 0 1px $primary-color;
-            }   
-        }
-        .call-box-post__more-about {
-            p{
-                font-size: 1.6rem;
-                font-weight: 400;
-                color: #2D9CDB;
             }
-            +below('mobile'){
+            img + .full-card-box-info{
+                border-top: 0;
+                //padding-top: 19px;
+            }
+            &-info{
+                border-top: 1px solid $primary-color;
+                border-right: 1px solid $primary-color;
+                border-left: 1px solid $primary-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: space-between;
+                flex: 1; 
+                padding: 32px 20px;
+                &:last-child{
+                    border-top: 0;
+                }
+                &-title{
+                    font-size: 3rem;
+                    font-weight: 500;
+                    color: #000000;
+                    line-height: 1.4;
+                }
+                &-content{
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                    color: #828282;
+                    line-height: 1.8;
+                    margin-top: -20px;
+                }
+                &-author{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 45px;
+                    span{
+                        font-size: 1.8rem;
+                        font-weight: 300;
+                        color: #828282;
+                        flex: 1;
+                    }
+                }
+            }
+            &-call{
+                border: 1px solid $primary-color;
+                display: flex;
+                justify-content: space-between;
                 align-items: center;
-                min-height: auto;
+                width: 100%;
+                height: 60px;
+                color: #828282;
+                padding: 25px 23px;
+                span:nth-child(1){
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                }
+                span:nth-child(2){
+                    font-size: 4rem;
+                }
             }
         }
+    }
+}
+// Full Card ( variations )
+.section.full-card.full-card-blog {
+    .wrapper{
+        margin-top: 38px;
     }
 }
 
