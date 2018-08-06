@@ -9,9 +9,13 @@
     padding-top: 50px;
     padding-bottom: 50px;
     .simple-card-boxes {
-        display: inline-block;
-        width: 100%;
-        margin-top: 4.4rem;
+        //display: inline-block;
+        //width: 100%;
+        //margin-top: 4.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: calc(-25px / 2);
         .simple-card-box,
         .simple-card-box__more-about {
             background-color: white;
@@ -19,11 +23,18 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: stretch;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: calc(100% / 2);
+            margin: calc(25px / 2);
             padding: 20px;
+            /*
             &:nth-child(-n+2){
                 margin-bottom: 3%;
             }
             column(1/2, $cycle: 2);
+            */
             h3,
             p{
                 color: #828282;
@@ -70,10 +81,11 @@
     }
 }
 // Simple Card ( variations )
-.section.simple-card.simple-card-blog {
-    padding-top: 0;
+.simple-card.simple-card-blog {
+    //padding-top: 0;
     .simple-card-boxes{
-        margin-top: 0;
+        //margin-top: 0;
+        .simple-card-box{}
     }
 }
 
@@ -82,27 +94,21 @@
 
 // Full Card
 .full-card{
-    display: inline-block;    
-    width: 100%;
     background-color: white;
-    padding-top: 50px;
-    padding-bottom: 50px;
     .full-card-boxes{
         display: flex;
-        //justify-content: space-between;
         flex-wrap: wrap;
+        padding: 0;
+        margin: 38px calc(-25px / 2);
         .full-card-box {
+            background-color: white;
             display: flex;
             flex-direction: column;
-            flex: 0 0 32%;
-            //flex: 0 0 31.5%;
-            background-color: white;
-            //column(1/3, $cycle: 3);
-            margin-right: 25px;
-            margin-bottom: 25px;
-            &:last-child{
-                margin-right: 0;
-            }
+            align-items: stretch;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: calc(100% / 3);
+            padding: calc(25px / 2);
             img + .full-card-box-info{
                 border-top: 0;
                 //padding-top: 19px;
@@ -114,7 +120,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                //align-items: space-between;
                 flex: 1; 
                 padding: 32px 20px;
                 &:last-child{
@@ -161,24 +166,21 @@
                     font-size: 4rem;
                 }
             }
-            +below('tablet'){
-                flex: 0 0 45%;
+            +below('tablet') {
+                flex-basis: calc(100% / 2)
+            }    
+
+            +below('mobile') {
+                flex-basis: calc(100%)
             }
-            +below('small-tablet'){
-                flex: 0 0 100%;
-                margin-right: 0;
-            }
-        }
-        +below('small-tablet'){
-            flex-direction: column;
         }
     }
 }
 // Full Card ( variations )
-.section.full-card.full-card-blog {
-    padding-bottom: 24px;
+.full-card.full-card-blog {
+    //padding-bottom: 24px;
     .full-card-boxes{
-        margin-top: 38px;
+        //margin-top: 38px;
     }
 }
 
