@@ -1,18 +1,45 @@
 
 // More Content Theme
-.more-content-theme{
+.more-content-theme{    
     .more-content-theme-tags{
-        margin-bottom: 42px;
+        display: flex;
+        flex-wrap: wrap;
         &:last-child{
-            margin-bottom: 0;    
+            margin-bottom: 0;
         }
-        li{
-            a{}
+        .category-theme-tags{
+            min-width: 130px;
+            color: #000000;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding-right: 16px;
+            +below('mobile') {
+                margin-bottom: 21px;
+            }
+        }
+        .list-theme-tags{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            li{
+                margin-right: 16px;
+                &:last-child{
+                    margin-right: 0;    
+                }
+                a{
+                    color: #3BA0E5;
+                }
+            }
+        }
+        +below('mobile') {
+            flex-direction: column;
         }
     }
 }
 // More Content Theme ( variations )
 .more-content-theme.more-content-theme-blog {
-    margin-top: 57px;
-    .more-content-theme-tags{}
+    margin-top: 55px;
+    .more-content-theme-tags{
+        margin-top: @margin-top;
+    }
 }

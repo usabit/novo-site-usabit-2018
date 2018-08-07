@@ -15,7 +15,7 @@
         display: flex;
         flex-wrap: wrap;
         padding: 0;
-        margin: calc(-25px / 2);
+        margin: calc(-22px / 2);
         .simple-card-box,
         .simple-card-box__more-about {
             background-color: white;
@@ -23,12 +23,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: stretch;
             flex-grow: 0;
             flex-shrink: 0;
             flex-basis: calc(100% / 2);
-            margin: calc(25px / 2);
-            padding: 20px;
+            margin: calc(22px / 2);
+            //padding: 20px;
             /*
             &:nth-child(-n+2){
                 margin-bottom: 3%;
@@ -51,6 +50,7 @@
                     font-size: 2rem;
                 }
             }
+            /*
             +below('mobile'){
                 margin-bottom: 3%;
                 column(1, $cycle: 1);
@@ -58,6 +58,7 @@
                     margin-bottom: 0;
                 }
             }
+            */
         }
         .simple-card-box{
             border: 1px solid $primary-color;
@@ -73,24 +74,74 @@
                 font-weight: 400;
                 color: #2D9CDB;
             }
+            /*
             +below('mobile'){
                 align-items: center;
                 min-height: auto;
             }
+            */
         }
     }
 }
 // Simple Card ( variations )
 .simple-card.simple-card-blog {
-    //padding-top: 0;
     .simple-card-boxes{
-        //margin-top: 0;
         .simple-card-box{}
     }
 }
 
 // Medium Card
-.medium-card{}
+.medium-card{
+    background-color: white;
+    .medium-card-boxes{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 38px calc(-25px / 2) 0;
+        .medium-card-box{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: calc(100% / 3);
+            padding: calc(25px / 2);
+            img + div{
+                border-top: none;
+            }
+            div{
+                border: 1px solid $primary-color;
+                display: flex;
+                .medium-card-box-title{
+                    font-size: 3rem;
+                    font-weight: 500;
+                    color: #000000;
+                    line-height: 1.4;
+                    margin: 90px 20px;
+                    +below('small-tablet') {
+                        margin: 45px 10px;
+                    }
+                }
+            }
+            +below('tablet') {
+                flex-basis: calc(100% / 2);
+            }
+            +below('mobile') {
+                flex-basis: calc(100%);
+                &:last-child{
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }    
+}
+// Medium Card ( variations )
+.medium-card.medium-card-blog {
+    .medium-card-boxes{
+        .medium-card-box{}
+    }
+}
 
 // Full Card
 .full-card{
@@ -167,21 +218,17 @@
                 }
             }
             +below('tablet') {
-                flex-basis: calc(100% / 2)
-            }    
-
+                flex-basis: calc(100% / 2);
+            }
             +below('mobile') {
-                flex-basis: calc(100%)
+                flex-basis: calc(100%);
             }
         }
     }
 }
 // Full Card ( variations )
 .full-card.full-card-blog {
-    //padding-bottom: 24px;
-    .full-card-boxes{
-        //margin-top: 38px;
-    }
+    .full-card-boxes{}
 }
 
 // Usabit Especial Card

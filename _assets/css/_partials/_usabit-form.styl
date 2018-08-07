@@ -1,0 +1,70 @@
+
+// Usabit FORM
+.usabit-form{
+    .usabit-form-content{
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 45px;
+        &-info{
+            border: 3px solid blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            flex: 1;
+            h2{
+                max-width: 647px;
+                line-height: 2;
+                font-size: 5rem;
+                font-weight: 500;
+                color: #000000;
+            }
+            //p{}
+        }
+        &-inputs{
+            border: 3px solid green;
+            width: 428px;
+            background-color: #1C415B;
+            //h2{}
+            //p{}
+            label{
+                font-size: 1.2rem;
+                color: #FFFFFF;
+            }
+            input[type=text],
+            input[type=email]{
+                display: inline-block;
+                width: 100%;
+                background-color: #2A4F69;
+                border: 1px solid rgba(86, 204, 242, 0.4);
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                color: white;
+            }
+            input[type=text]:focus, 
+            input[type=email]:focus{}
+            input[type=input]{}
+        }
+    }
+}
+// Usabit FORM ( variations )
+.usabit-form.usabit-form-blog {
+    .usabit-form-content{
+        &-info{
+            //h2{}
+            //p{}
+        }
+        &-inputs{
+            //h2{}
+            //p{}
+            label{}
+            input[type=text],
+            input[type=email] {}
+            input[type=text]:focus, 
+            input[type=email]:focus {}
+            input[type=input]{}
+        }
+    }
+}
