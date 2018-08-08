@@ -5,7 +5,7 @@
         //border: 1px solid red;
         display: flex;
         align-items: stretch;
-        padding: 45px;
+        padding: 45px 45px 40px;
         &-info{
             //border: 1px solid blue;
             display: flex;
@@ -26,13 +26,18 @@
                 max-width: 647px;                
                 font-size: 5rem;
                 font-weight: 400;
-                
+                +below('mobile'){
+                    font-size: 4rem;
+                }
             }
             p{
                 max-width: 752px;                
                 font-size: 3.2rem;
                 font-weight: 300;
                 margin-top: 63px;
+                +below('mobile'){
+                    margin-top: 0;
+                }
             }
         }
         &-inputs{
@@ -48,11 +53,12 @@
                 font-weight: 200;
                 color: #97B3C6;
                 line-height: 1.2;
-                margin-top: 32px;
-                margin-bottom: 48px;
+                margin-top: 35px;
+                margin-bottom: 70px;
             }
             label{
                 font-size: 1.2rem;
+                font-weight: 300;
                 color: #FFFFFF;
             }
             input[type=text],
@@ -64,17 +70,20 @@
                 outline: none;
                 border-radius: 3px;
                 padding: 15px;
-                margin: 6px 0 18px 0;
+                margin: 7px 0 18px 0;
                 color: white;
+            }
+            input[name=clientbusiness]{
+                margin-bottom: 39px;
             }
             input[type=text]:focus, 
             input[type=email]:focus{
                 box-shadow: none;
             }
             input[type=submit]{
-                margin-top: 17px;
                 min-width: auto;
                 width: 100%;
+                margin-bottom: 7px;
             }
             +below('small-tablet'){
                 width: 100%;
@@ -89,19 +98,9 @@
 // Usabit FORM ( variations )
 .usabit-form.usabit-form-blog {
     .usabit-form-content{
-        &-info{
-            //h2{}
-            //p{}
-        }
-        &-inputs{
-            //h2{}
-            //p{}
-            label{}
-            input[type=text],
-            input[type=email] {}
-            input[type=text]:focus, 
-            input[type=email]:focus {}
-            input[type=input]{}
+        margin-top: 127px;
+        +below('mobile'){
+            margin-top: 0;
         }
     }
 }

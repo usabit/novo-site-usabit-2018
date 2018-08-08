@@ -9,84 +9,96 @@
     padding-top: 50px;
     padding-bottom: 50px;
     .simple-card-boxes {
-        //display: inline-block;
-        //width: 100%;
-        //margin-top: 4.4rem;
+        //border: 1px solid blue;
         display: flex;
         flex-wrap: wrap;
-        padding: 0;
-        margin: calc(-22px / 2);
-        .simple-card-box,
-        .simple-card-box__more-about {
-            background-color: white;
-            min-height: 150px;
+        margin: calc(-22.1px / 2);
+        .simple-card-column{
+            //border: 1px dashed purple;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            align-items: stretch;
             flex-grow: 0;
             flex-shrink: 0;
             flex-basis: calc(100% / 2);
-            margin: calc(22px / 2);
-            //padding: 20px;
-            /*
-            &:nth-child(-n+2){
-                margin-bottom: 3%;
-            }
-            column(1/2, $cycle: 2);
-            */
-            h3,
-            p{
-                color: #828282;
-            }
-            h3{
-                font-size: 1.6rem;
-                font-weight: 400;
-                margin-bottom: 10px;
-            }
-            p{
-                font-size: 2.5rem;
-                font-weight: 500;
-                +below('tablet'){
-                    font-size: 2rem;
+            .simple-card-box,
+            .simple-card-box__more-about {
+                background-color: white;
+                min-height: 150px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 20px;
+                margin: calc(22.1px / 2);
+                h3,
+                p{
+                    color: #828282;
+                }
+                h3{
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    margin-top: 10px;
+                    margin-bottom: 8px;
+                }
+                p{
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    +below('tablet'){
+                        font-size: 2rem;
+                    }
+                }
+                +below('small-tablet'){
+                    margin: 0 0 22.1px;
+                    flex-basis: calc(100%);
                 }
             }
-            /*
-            +below('mobile'){
-                margin-bottom: 3%;
-                column(1, $cycle: 1);
+            .simple-card-box{
+                border: 1px solid $primary-color;
+                &:hover {
+                    -moz-box-shadow:    inset 0 0 0 1px $primary-color;
+                    -webkit-box-shadow: inset 0 0 0 1px $primary-color;
+                    box-shadow:         inset 0 0 0 1px $primary-color;
+                }   
+            }
+            .simple-card-box__more-about {
+                p{
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: #2D9CDB;
+                }
+            }
+            +below('small-tablet'){
+                flex-basis: calc(100%);
                 &:last-child{
-                    margin-bottom: 0;
+                    .simple-card-box,
+                    .simple-card-box__more-about{
+                        margin-bottom: 0;
+                    }                    
                 }
             }
-            */
         }
-        .simple-card-box{
-            border: 1px solid $primary-color;
-            &:hover {
-                -moz-box-shadow:    inset 0 0 0 1px $primary-color;
-                -webkit-box-shadow: inset 0 0 0 1px $primary-color;
-                box-shadow:         inset 0 0 0 1px $primary-color;
-            }   
-        }
-        .simple-card-box__more-about {
-            p{
-                font-size: 1.6rem;
-                font-weight: 400;
-                color: #2D9CDB;
-            }
-            /*
-            +below('mobile'){
-                align-items: center;
-                min-height: auto;
-            }
-            */
+        +below('small-tablet'){
+            margin: 0;
         }
     }
 }
 // Simple Card ( variations )
-.simple-card.simple-card-blog {
+.simple-card.simple-card-home {
+    padding-bottom: 0;
+    +below('mobile'){
+        padding-bottom: 59px;
+    }
     .simple-card-boxes{
-        .simple-card-box{}
+        .simple-card-column{
+            .simple-card-box__more-about{
+                +below('small-tablet'){
+                    display: block;
+                    min-height: auto;
+                    padding: 0;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+        }
     }
 }
 
@@ -139,6 +151,8 @@
 // Medium Card ( variations )
 .medium-card.medium-card-blog {
     .medium-card-boxes{
+        margin-top: 25.5px;
+        margin-bottom: 58px;
         .medium-card-box{}
     }
 }
@@ -187,6 +201,10 @@
                     font-weight: 300;
                     color: #828282;
                     line-height: 1.8;
+                    margin-top: -15px;
+                    +below(1200px) {
+                        margin-top: 20px;
+                    }
                 }
                 &-author{
                     display: flex;
@@ -208,7 +226,7 @@
                 width: 100%;
                 height: 60px;
                 color: #828282;
-                padding: 25px 23px;
+                padding: 32px 23px;
                 span:nth-child(1){
                     font-size: 1.8rem;
                     font-weight: 400;
@@ -228,7 +246,10 @@
 }
 // Full Card ( variations )
 .full-card.full-card-blog {
-    .full-card-boxes{}
+    .full-card-boxes{
+        margin-top: 25.5px;
+        margin-bottom: -10px;
+    }
 }
 
 // Usabit Especial Card
