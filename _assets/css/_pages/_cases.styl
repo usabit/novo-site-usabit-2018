@@ -2,27 +2,123 @@
 
 // Top Titles
 .top-titles{
-    border: 1px solid red;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .wrapper{
-        border: 1px solid green;
+    .top-titles-content{
+        padding: 142px 0 155px;
         text-align: center;
         h2{
-            border: 1px solid blue;
             font-size: 8rem;
-            font-weight: 400;
+            font-weight: 500;
             color: #000000;
-            max-width: 590px;
             margin: 0 auto;
+            line-height: 1.2;
+            +below('mobile'){
+                font-size: 6rem;
+                line-height: 1.1;
+            }
         }
         h3{
-            border: 1px solid purple;
-            max-width: 590px;
-            margin: 0 auto;
+            max-width: 780px;
+            font-size: 4rem;
+            font-weight: 400;
+            color: #2D9CDB;
+            margin: 42px auto 0;
+            line-height: 1.2;
+            +below('mobile'){
+                font-size: 2.5rem;
+                margin-top: 30px;
+            }
+        }
+        +below('mobile'){
+            font-size: 3rem;
+            padding: 100px 0;
+        }
+    }    
+}
+
+// The Cases
+.the-cases{
+    .the-cases-list{
+        .cases-item{
+            display: flex;
+            align-items: center;
+            margin-top: 150px;
+            &:first-child{
+                margin-top: 0;    
+            }
+            .cases-img{
+                margin-right: 133px;
+            } 
+            .cases-info{
+                flex: 1;
+                .cases-title,
+                .cases-description{
+                    max-width: 620px;
+                    font-size: 3rem;
+                    line-height: 1.2;
+                }
+                .cases-title{
+                    font-weight: 700;
+                    margin-top: 44px;
+                }
+                .cases-description{
+                    font-weight: 400;
+                }
+                a.btn{
+                    margin-top: 46px;
+                }    
+            }
+            &:nth-child(even){
+                flex-direction: row-reverse;
+                .cases-img{
+                    margin-right: 0;
+                    margin-left: 133px;
+                }
+                .cases-info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    text-align: right;
+                }
+            }
+            +below('tablet'){
+                display: block;
+                margin-top: 50px;
+                &:first-child{
+                    margin-top: 0;    
+                }
+                .cases-img{
+                    margin: 0 auto 30px;
+                }
+                .cases-info{
+                    display: block;
+                    text-align: center;                    
+                    .cases-logo,
+                    .cases-description{
+                        margin: 0 auto; 
+                    }
+                    .cases-title{
+                        margin: 30px auto 0;
+                    }
+                    a.btn{
+                        margin-top: 30px;
+                    }
+                }
+                &:nth-child(even){
+                    .cases-img{
+                        margin: 0 auto 30px;
+                    }
+                    .cases-info{
+                        display: block;
+                        text-align: center;
+                        .cases-title{
+                            margin-top: 30px;
+                        }
+                        a.btn{
+                            margin-top: 30px;
+                        }
+                    }    
+                }
+            }
         }
     }    
 }
