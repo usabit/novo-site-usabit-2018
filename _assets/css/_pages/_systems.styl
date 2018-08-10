@@ -1,2 +1,88 @@
 
 // Landing: SYSTEMS
+
+.specialists-team{
+    .wrapper{
+        overflow: initial;
+        .specialists-team-content{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid blue;
+            .usabit-form-content-inputs{
+                margin-top: -140px;
+                margin-right: 56px;
+                margin-bottom: -60px;
+                h2{
+                    margin-top: 0;
+                }
+                .specialists-team-greeting{
+                    font-weight: 300;
+                    color: #97B3C6;
+                    line-height: 1.3;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    span{
+                        display: block;
+                        font-weight: 400;
+                        color: white;
+                    }
+                }
+                .specialists-team-contact{
+                    font-size: 2rem;
+                    font-weight: 400;
+                    color: #56CCF2;
+                    margin-bottom: 20px;   
+                }
+                +below('tablet'){
+                    margin-right: 0;
+                }
+            }
+            .specialists-team-content-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1;
+                padding-right: 20px;
+                border: 1px dashed green;
+                h1,
+                p{
+                    color: #000000;                    
+                    line-height: 1.2;
+                }
+                h1{
+                    font-size: 4rem;
+                    font-weight: 500;
+                    max-width: 595px;
+                }
+                p{
+                    font-size: 2.4rem;
+                    font-weight: 300;
+                    max-width: 656px;
+                    margin-top: 40px;
+                }
+            }
+        }
+        +below('small-tablet'){
+            .specialists-team-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid blue;
+                .usabit-form-content-inputs{
+                    width: 100%;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                    order: 2;
+                }
+                .specialists-team-content-info{
+                    width: 100%;
+                    order: 1;
+                    border: 1px dashed green;
+                }
+            }
+        }
+    }    
+}

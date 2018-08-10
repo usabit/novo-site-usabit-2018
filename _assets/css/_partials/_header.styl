@@ -201,20 +201,16 @@
             height: 24px;
             fill: white;
             opacity: 0.7;
+            +below('tablet') {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         +below('tablet') {
-            top: 20px;
-            right: 20px;
+            top: 35px;
+            right: 35px;
             zoom: 0.8;
-        }
-        +below('small-tablet') {
-            zoom: 0.6;
-        }
-        +below('mobile') {
-            top: 15px;
-            right: 15px;
-            zoom: 0.5;
         }
     }
     &__left {
@@ -301,11 +297,8 @@
         +below('desktop') {
             overflow: auto;
         }
-        +below('small-tablet') {
-            padding: 25px;
-        }
-        +below('mobile') {
-            padding: 15px;
+        +below('tablet') {
+            padding: 80px 40px 40px;
         }
 
         h1, h2 {
