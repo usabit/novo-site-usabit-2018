@@ -1,6 +1,7 @@
 
 // Landing: SYSTEMS
 
+// Specialists Team
 .specialists-team{
     .wrapper{
         overflow: initial;
@@ -9,20 +10,19 @@
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid blue;
             .usabit-form-content-inputs{
                 margin-top: -140px;
-                margin-right: 56px;
                 margin-bottom: -60px;
                 h2{
-                    margin-top: 0;
+                    margin-top: 10px;
+                    line-height: 0;
                 }
                 .specialists-team-greeting{
                     font-weight: 300;
                     color: #97B3C6;
                     line-height: 1.3;
                     margin-top: 30px;
-                    margin-bottom: 30px;
+                    margin-bottom: 25px;
                     span{
                         display: block;
                         font-weight: 400;
@@ -33,7 +33,8 @@
                     font-size: 2rem;
                     font-weight: 400;
                     color: #56CCF2;
-                    margin-bottom: 20px;   
+                    margin-bottom: 22px;
+                    line-height: 1.2;   
                 }
                 +below('tablet'){
                     margin-right: 0;
@@ -45,7 +46,6 @@
                 justify-content: center;
                 flex: 1;
                 padding-right: 20px;
-                border: 1px dashed green;
                 h1,
                 p{
                     color: #000000;                    
@@ -53,7 +53,7 @@
                 }
                 h1{
                     font-size: 4rem;
-                    font-weight: 500;
+                    font-weight: 400;
                     max-width: 595px;
                 }
                 p{
@@ -85,4 +85,60 @@
             }
         }
     }    
+}
+
+// Software Decisions
+.software-decisions{
+    padding-top: 145px;
+    padding-bottom: 480px;
+    .software-decisions-title,
+    .software-decisions-description,
+    a.btn.submit{
+        margin-left: 164px;    
+    }
+    .software-decisions-title,
+    .software-decisions-description{
+        color: #000000;
+        line-height: 1.2;
+    }
+    .software-decisions-title{
+        font-size: 5rem;
+        font-weight: 400;
+        max-width: 538px;
+    }
+    .software-decisions-description{
+        font-size: 3.2rem;
+        font-weight: 300; 
+        max-width: 720px;
+        margin-top: 63px;
+        margin-bottom: 50px;
+    }
+}
+
+// Testing and Security
+.testing-and-security{
+    padding-top: 525px;
+    padding-bottom: 525px;
+    .testing-and-security-title,
+    .testing-and-security-description,
+    a.btn.submit{
+        margin-left: 164px;    
+    }
+    .testing-and-security-title,
+    .testing-and-security-description{
+        color: white;
+        line-height: 1.2;
+    }
+    .testing-and-security-title{
+        font-size: 5rem;
+        font-weight: 400;
+        max-width: 600px;
+    }
+    .testing-and-security-description{
+        font-size: 3.2rem;
+        font-weight: 300; 
+        max-width: 720px;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
 }
