@@ -12,6 +12,7 @@ var del = require('del');
 var sequence = require('run-sequence');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var browserSync = require('browser-sync').create();
 
 gulp.task('stylus', function() {
     return gulp.src([
@@ -25,7 +26,7 @@ gulp.task('stylus', function() {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./assets/css'))
-        .pipe(connect.reload());
+        //.pipe(connect.reload());
 });
 
 gulp.task('svg', function() {
@@ -42,7 +43,7 @@ gulp.task('imagemin', ['svg'], function() {
             interlaced: true
         }))
         .pipe(gulp.dest('./assets/img/'))
-        .pipe(connect.reload());
+        //.pipe(connect.reload());
 });
 
 gulp.task('js', function() {
@@ -54,7 +55,7 @@ gulp.task('js', function() {
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./assets/js/'))
-        .pipe(connect.reload());
+        //.pipe(connect.reload());
 });
 
 gulp.task('clean', function(cb) {
@@ -70,20 +71,30 @@ gulp.task('sequence', function(callback) {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./_assets/css/**/*.styl', ['stylus']);
-    gulp.watch('./_assets/img/**/*.{jpg,png,gif}', ['imagemin']);
-    gulp.watch('./_assets/js/**/*.js', ['js']);
-    gulp.watch('./*.html', ['reload']);
+    gulp.watch('./_assets/css/**/*.styl', ['stylus']).on('change', browserSync.reload);
+    gulp.watch('./_assets/img/**/*.{jpg,png,gif}', ['imagemin']).on('change', browserSync.reload);
+    gulp.watch('./_assets/js/**/*.js', ['js']).on('change', browserSync.reload);
+    gulp.watch('./*.html').on('change', browserSync.reload);
+    //gulp.watch('./*.html', ['reload']);
 });
 
-gulp.task('reload', function() {
-    gulp.src(['./assets/**/*', '*.html'])
-        .pipe(connect.reload());
-});
+//gulp.task('reload', function() {
+    //gulp.src(['./assets/**/*', '*.html'])
+        //.pipe(connect.reload());
+//});
 
 gulp.task('default', ['sequence'], function() {
+    // BowserSync
+    browserSync.init({
+        port: 5000,
+        server: {
+            baseDir: "./"
+        }      
+    });
+    /* Gulp Connect
     connect.server({
         port: 8888,
         livereload: true
     });
+    */
 });
