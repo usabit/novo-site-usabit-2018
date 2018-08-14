@@ -70,7 +70,8 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid blue;
+                margin-top: 35px;
+                margin-bottom: 50px;
                 .usabit-form-content-inputs{
                     width: 100%;
                     margin-top: 20px;
@@ -80,7 +81,13 @@
                 .specialists-team-content-info{
                     width: 100%;
                     order: 1;
-                    border: 1px dashed green;
+                    h1 {
+                        font-size: 3rem;
+                    }
+                    p{                        
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
@@ -94,7 +101,10 @@
     .software-decisions-title,
     .software-decisions-description,
     a.btn.submit{
-        margin-left: 164px;    
+        margin-left: 164px;
+        +below('small-tablet'){
+            margin-left: 0;
+        }  
     }
     .software-decisions-title,
     .software-decisions-description{
@@ -105,6 +115,9 @@
         font-size: 5rem;
         font-weight: 400;
         max-width: 538px;
+        +below('small-tablet'){
+            font-size: 3rem;
+        }  
     }
     .software-decisions-description{
         font-size: 3.2rem;
@@ -112,6 +125,15 @@
         max-width: 720px;
         margin-top: 63px;
         margin-bottom: 50px;
+        +below('small-tablet'){
+            font-size: 2.4rem;
+            margin-top: 28px;
+            margin-bottom: 40px;
+        }  
+    }
+    +below('small-tablet'){        
+        padding-top: 35px;
+        padding-bottom: 40px;
     }
 }
 
@@ -122,7 +144,10 @@
     .testing-and-security-title,
     .testing-and-security-description,
     a.btn.submit{
-        margin-left: 164px;    
+        margin-left: 164px;
+        +below('small-tablet'){
+            margin-left: 0;
+        }    
     }
     .testing-and-security-title,
     .testing-and-security-description{
@@ -133,6 +158,9 @@
         font-size: 5rem;
         font-weight: 400;
         max-width: 600px;
+        +below('small-tablet'){
+            font-size: 3rem;
+        }
     }
     .testing-and-security-description{
         font-size: 3.2rem;
@@ -140,5 +168,14 @@
         max-width: 720px;
         margin-top: 70px;
         margin-bottom: 50px;
+        +below('small-tablet'){
+            font-size: 2.4rem;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+    }
+    +below('small-tablet'){
+        padding-top: 35px;
+        padding-bottom: 40px;
     }
 }

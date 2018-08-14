@@ -263,53 +263,6 @@
     }
 }
 
-// Horizontal Card - Left
-.horizontal-card-left{
-    position: relative;
-    width: 100%;
-    background: linear-gradient(to right, #8A8A8A 50%, transparent 50%);
-    .wrapper{
-        margin-top: -322px;
-        margin-bottom: -322px;
-        .horizontal-card-content{
-            display: flex;
-            flex-direction: row-reverse;
-            flex: 1;
-            .horizontal-card-icon{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-basis: 389px;
-                background-color: #2FA1F4;
-            }
-            .horizontal-card-info{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                flex: 1;
-                background-color: #8A8A8A;
-                padding: 150px 0 190px;
-                .horizontal-card-info-title,
-                .horizontal-card-info-description{
-                    color: white;
-                    line-height: 1.2;
-                }
-                .horizontal-card-info-title{
-                    font-size: 5rem;
-                    font-weight: 400;
-                    max-width: 600px;
-                    margin-bottom: 62px;               
-                }
-                .horizontal-card-info-description{
-                    font-size: 3.2rem;
-                    font-weight: 300; 
-                    max-width: 720px;   
-                }
-            }        
-        }
-    }
-}
-
 // Horizontal Card - Right
 .horizontal-card-right{
     position: relative;
@@ -328,6 +281,11 @@
                 align-items: center;
                 flex-basis: 389px;
                 background-color: #FF7B1B;
+                +below('small-tablet'){
+                    flex: 1;
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                }
             }
             .horizontal-card-info{
                 display: flex;
@@ -345,15 +303,135 @@
                     font-size: 5rem;
                     font-weight: 400;
                     max-width: 600px;
-                    margin-bottom: 60px;                
+                    margin-bottom: 60px;
+                    +below('small-tablet'){
+                        font-size: 3rem;
+                        margin-bottom: 25px;
+                    }                
                 }
                 .horizontal-card-info-description{
                     font-size: 3.2rem;
                     font-weight: 300; 
-                    max-width: 720px;   
+                    max-width: 720px;
+                    +below('small-tablet'){
+                        font-size: 2.4rem;
+                    }
                 }
+                +below('small-tablet'){
+                    padding: 40px;
+                }
+                +below('mobile'){
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+            }
+            +below('small-tablet'){
+                flex-direction: column;
+            }
+        }
+        +below(1348px){
+            margin-top: -335px;
+            margin-bottom: -345px;
+        }
+        +below(1199px){
+            margin-top: -374px;
+            margin-bottom: -364px;
+        }
+        +below(1162px){
+            margin-top: -393px;
+            margin-bottom: -383px;
+        }
+        +below(1117px){
+            margin-top: -412px;
+            margin-bottom: -402px;
+        }
+        +below('small-tablet'){
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+    +below('small-tablet'){
+        background: none;
+    }
+}
+
+// Horizontal Card - Left
+.horizontal-card-left{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(to right, #8A8A8A 50%, transparent 50%);
+    .wrapper{
+        margin-top: -322px;
+        margin-bottom: -322px;
+        .horizontal-card-content{
+            display: flex;
+            flex-direction: row-reverse;
+            flex: 1;
+            .horizontal-card-icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-basis: 389px;
+                background-color: #2FA1F4;
+                +below('small-tablet'){
+                    flex: 1;
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                }
+            }
+            .horizontal-card-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1;
+                background-color: #8A8A8A;
+                padding: 150px 0 190px;
+                .horizontal-card-info-title,
+                .horizontal-card-info-description{
+                    color: white;
+                    line-height: 1.2;
+                }
+                .horizontal-card-info-title{
+                    font-size: 5rem;
+                    font-weight: 400;
+                    max-width: 600px;
+                    margin-bottom: 62px;
+                    +below('small-tablet'){
+                        font-size: 3rem;
+                        margin-bottom: 25px;
+                    }               
+                }
+                .horizontal-card-info-description{
+                    font-size: 3.2rem;
+                    font-weight: 300; 
+                    max-width: 720px;
+                    +below('small-tablet'){
+                        font-size: 2.4rem;
+                    }   
+                }
+                +below('small-tablet'){
+                    padding: 40px;
+                }
+                +below('mobile'){
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+            }
+            +below('small-tablet'){
+                flex-direction: column;
             }        
         }
+        +below('small-tablet'){
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+    +below('small-tablet'){
+        background: none;
     }
 }
 
