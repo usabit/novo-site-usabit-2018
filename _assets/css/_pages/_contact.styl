@@ -1,0 +1,94 @@
+// CONTACT
+
+// Top Title Contact
+.top-title-contact{
+    background-color: white;
+    padding-top: 90px;
+    padding-bottom: 86px;
+    .wrapper{
+        p{
+            font-size: 3.8rem;
+            font-weight: 300;
+            color: #000000;
+            line-height: 1.4;
+            max-width: 600px;
+            span{
+                font-weight: 700;
+            }
+            +below('tablet'){
+                font-size: 3rem;
+            }
+            +below('mobile'){
+                max-width: 100%;
+                line-height: 1.2;
+            }
+        }
+    }
+    +below('tablet'){
+        padding-bottom: 70px;
+    }
+    +below('mobile'){
+        padding-top: 70px;
+        padding-bottom: 55px;
+    }
+}
+
+// Contact types
+.contact-types{
+    border: 1px solid blue;
+    .wrapper{
+        display: flex;
+        align-items: stretch;
+        // Help and Support
+        .help-and-support{
+            border: 1px solid red;
+            flex-basis: 50%;
+            margin-right: 1px solid #E0E0E0;
+            .help-and-support-list{
+                border: 1px solid green;
+                margin-top: 40px;
+                .help-and-support-item{
+                    margin-top: 30px;
+                    &:first-child{
+                        margin-top: 0;    
+                    }
+                    a{
+                        font-size: 1.6rem;
+                        font-weight: 300;  
+                    }
+                    +below('mobile'){
+                        padding: 25px;
+                    }
+                }
+            }
+            .technical-service-hours-title{
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #828282;
+                text-transform: uppercase;
+                margin-top: 75px;
+            }
+            .technical-service-hours-info{
+                font-size: 1.6rem;
+                font-weight: 300;
+                color: #4F4F4F;
+                margin-top: 55px;
+                margin-bottom: 25px;  
+            }
+            +below('tablet'){
+                margin-bottom: 0;
+            }
+            +below('mobile'){
+                margin-bottom: 44px;
+            }    
+        }
+        // Contact Forms
+        .contact-forms{
+            border: 1px solid red;
+            flex-basis: 50%;
+        }
+        +below('small-tablet'){
+            flex-direction: column;
+        }
+    }
+}

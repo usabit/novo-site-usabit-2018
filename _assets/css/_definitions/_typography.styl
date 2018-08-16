@@ -69,10 +69,16 @@ a{
     color: #3BA0E5;
     text-decoration: none;
     transition: all 250ms;
+    &.text-link{
+        color: #2D9CDB;    
+    }
     &:hover,
     &.active,
     &:active{
         transition: all 250ms;
         color: @color - 15%;
+        &.text-link{           
+            color: #2D9CDB - 25%;    
+        }
     }
 }
