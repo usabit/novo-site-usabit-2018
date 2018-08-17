@@ -36,16 +36,16 @@
 // Contact types
 .contact-types{
     border: 1px solid blue;
+    margin-bottom: 150px;
     .wrapper{
         display: flex;
         align-items: stretch;
+        overflow: initial;
         // Help and Support
         .help-and-support{
-            border: 1px solid red;
+            border-right: 1px solid #E0E0E0;
             flex-basis: 50%;
-            margin-right: 1px solid #E0E0E0;
             .help-and-support-list{
-                border: 1px solid green;
                 margin-top: 40px;
                 .help-and-support-item{
                     margin-top: 30px;
@@ -55,9 +55,6 @@
                     a{
                         font-size: 1.6rem;
                         font-weight: 300;  
-                    }
-                    +below('mobile'){
-                        padding: 25px;
                     }
                 }
             }
@@ -75,20 +72,190 @@
                 margin-top: 55px;
                 margin-bottom: 25px;  
             }
+            .help-and-support-phones{
+                position: relative;
+                .phone-tooltip{
+                    position: absolute;
+                    display: inline-block;
+                    min-width: 243px;
+                    border-radius: 3px;
+                    background-color: rgba(0,0,0,.8);
+                    padding: 25px 10px;
+                    width: inherit;
+                    bottom: 55px;
+                    left: 0;
+                    font-weight: 400;
+                    color: white;
+                    text-align: center;
+                    line-height: 1.5;
+                    letter-spacing: .8px;
+                    transition: none;
+                    span{
+                        font-weight: 700;
+                        display: block;
+                    }
+                }
+                button.btn.blue.btn-phone{
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }
             +below('tablet'){
+                border: none; 
                 margin-bottom: 0;
             }
             +below('mobile'){
                 margin-bottom: 44px;
-            }    
+            }
+            button.btn.blue.btn-phone{
+		        border: 1px solid #3BA0E5;
+		        background: #3BA0E5;
+            }
         }
         // Contact Forms
         .contact-forms{
-            border: 1px solid red;
             flex-basis: 50%;
+            height: 750px;
+            border: 1px solid red;
+            .title-and-btn-change{
+                position: relative;
+                display: flex;
+                padding-left: 92px;
+                .title-template,
+                .btn-change-facebook-form,
+                .btn-change-default-form{
+                    flex-basis: 50%;
+                    +below('mobile'){
+                        flex: 1;
+                    }
+                }
+                .btn-change-facebook-form,
+                .btn-change-default-form{
+                    position: absolute;
+                    right: 0;
+                    span{
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        color: #4F4F4F;
+                    }
+                    +below('mobile'){
+                        margin-top: 0;
+                    }
+                }
+                .btn-change-facebook-form{
+                    //border: 1px solid blue;
+                    margin-top: -2px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    svg {
+                        margin-left: 10px;
+                    }
+                    +below('mobile'){
+                        //justify-content: flex-start;
+                        flex-direction: row-reverse;
+                        margin-top: 20px;
+                        svg {
+                            margin-left: 0;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .btn-change-default-form{
+                    //border: 1px solid purple;
+                    align-self: center;
+                    text-align: right;
+                    margin-top: -6px;
+                }
+                +below('tablet'){
+                    padding-left: 0;
+                }
+                +below('mobile'){
+                    flex-direction: column;
+                }
+            }
+            .the-contact-forms{
+                position: relative;
+                width: 100%;
+                margin-top: 50px;
+                //border: 1px solid green;
+                .facebook-form,
+                .default-form{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 92px;
+                    width: calc(@width - 92px);
+                    +below('tablet'){
+                        left: 0;
+                        width: 100%;
+                    }
+                    +below('small-tablet'){
+                        padding-left: 0;
+                    }
+                }
+                .facebook-form{
+                    //border: 1px solid blue;
+                }
+                .default-form{
+                    label{
+                        display: block;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: #000000;
+                        margin-top: 35px;
+                        margin-bottom: 5px;
+                        &:first-child{
+                            margin-top: 0;    
+                        }
+                    }
+                    input[type="text"],
+                    input[type="email"],
+                    textarea{
+                        background-color: #ECECEC;
+                        border: none;
+                        border-left: 3px solid #56CCF2;
+                        display: block;
+                        width: 100%;
+                        padding: 15px;
+                        outline: none;
+                        resize: none;
+                    }
+                    textarea{
+                        min-height: 250px;
+                    }
+                    input[type=text]:focus, 
+                    input[type=email]:focus,
+                    textarea:focus{
+                        box-shadow: none;
+                    }
+                    input[type="submit"]{
+                        margin-top: 32px;
+                        float: right;
+                    }
+                    +below('mobile'){
+                        textarea{
+                            min-height: 150px;
+                        }
+                        input[type="submit"]{
+                            min-width: 100%;
+                        }
+                    }
+                }
+            }
+            +below('tablet'){
+                margin-top: 70px;
+            }
+            +below('mobile'){
+                height: 648px;
+            }
         }
-        +below('small-tablet'){
+        +below('tablet'){
             flex-direction: column;
         }
+    }
+    +below('tablet'){
+        margin-bottom: 35px;
     }
 }

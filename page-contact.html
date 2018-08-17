@@ -307,22 +307,69 @@
                     <p class="technical-service-hours-info">
                         Segunda à Quinta das 9h às 18h e Sextas às 17.
                     </p>
-                    <a class="btn blue" href="#">Telefones</a>
+                    <div class="help-and-support-phones">
+                        <a class="phone-tooltip" href="tel:2135142887">
+                            Lorem Ipsum Dolor Sit
+                            <span>+55 21 3514-2887</span>
+                        </a>
+                        <button class="btn blue btn-phone">Telefones</button>
+                    </div>
                 </div>
                 <!-- Contact Forms -->
                 <div class="contact-forms">
-                    <div class="title-and-change-box">
+                    <div class="title-and-btn-change">
                         <h2 class="title-template">Contato</h2>
-                        <a class="change-box">
-                            <span></span>
-                            <!-- svg or img-->
+                        <a class="btn-change-facebook-form">
+                            <span>Escreva direto pelo Facebook</span>
+                            <svg width="37" height="37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h37v37H0z"/>
+                                <path d="M18.5 0C8.283 0 0 7.668 0 17.129c0 5.39 2.69 10.198 6.894 13.338V37l6.299-3.457c1.681.465 3.462.717 5.307.717 10.217 0 18.5-7.67 18.5-17.13C37 7.668 28.717 0 18.5 0z" fill="#1E88E5"/>
+                                <path d="M20.338 23.067l-4.71-5.025-9.192 5.025 10.11-10.735 4.826 5.026 9.079-5.026-10.113 10.735z" fill="#FAFAFA"/>
+                            </svg>
+                        </a>
+                        <a class="btn-change-default-form">
+                            <span>Voltar para o FORMULÁRIO</span>
                         </a>
                     </div>
-                    <div class="box-form">
-                        <!-- form -->
-                    </div>
-                    <div class="box-facebook">
-                        <!-- facebook -->
+                    <div class="the-contact-forms">
+                        <div class="default-form">
+                            <form class="" action="" method="post">
+                                <label for="default-form-name">
+                                    Nome
+                                </label>
+                                <input type="text" name="default-form-name" required>
+                                <label for="default-form-mail">
+                                    E-mail
+                                </label>
+                                <input type="email" name="default-form-mail" required>
+                                <label for="default-form-phone">
+                                    Telefone
+                                </label>
+                                <input type="text" name="default-form-phone" required>
+                                <label for="default-form-massage">
+                                    Mensagem
+                                </label>
+                                <textarea name="default-form-massage"></textarea>
+                                <!-- submit -->
+                                <input type="submit" class="btn blue" value="Enviar"></input>
+                            </form>
+                        </div>
+                        <div class="facebook-form">
+                            <p>facebook form</p>
+                            <div
+                            class="fb-page"
+                            data-href="https://www.facebook.com/usabitdigital/"
+                            data-tabs="messages, timeline"
+                            data-small-header="false"
+                            data-adapt-container-width="true"
+                            data-hide-cover="false"
+                            data-show-facepile="true"
+                            >
+                                <div class="fb-xfbml-parse-ignore">
+                                    <blockquote cite="https://www.facebook.com/usabitdigital/"><a href="https://www.facebook.com/usabitdigital/">Usabit</a></blockquote>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -369,6 +416,40 @@
                 </div>
             </div>
         </section>
+
+        <!-- Scripts specific to this page -->
+        <script src="assets/vendor/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                // Phone Tooltip
+                $('.phone-tooltip').hide();
+                $('.btn-phone').on('click', function(){
+                    if($('.phone-tooltip').is(':visible')){
+                        $('.phone-tooltip').fadeOut();
+                    }else{
+                        $('.phone-tooltip').fadeIn();
+                    }
+                });
+                
+                // Show or hide contact forms
+                $(".btn-change-default-form").hide();
+                $(".facebook-form").hide();
+                $(".btn-change-facebook-form").on('click', function() {
+                    $(this).fadeOut();
+                    $(".default-form").fadeOut();
+                    $(".btn-change-default-form").fadeIn();
+                    $(".facebook-form").fadeIn();
+                });
+                $(".btn-change-default-form").on('click', function() {
+                    $(this).fadeOut();
+                    $(".facebook-form").fadeOut();
+                    $(".btn-change-facebook-form").fadeIn();
+                    $(".default-form").fadeIn();
+                });
+
+            });
+        </script>
 
         <footer class="footer">
             <div class="wrapper">

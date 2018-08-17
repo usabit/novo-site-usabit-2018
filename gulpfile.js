@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
-var connect = require('gulp-connect');
 var stylus = require('gulp-stylus');
 var jeet = require('jeet');
 var rupture = require('rupture');
@@ -26,7 +25,6 @@ gulp.task('stylus', function() {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./assets/css'))
-        //.pipe(connect.reload());
 });
 
 gulp.task('svg', function() {
@@ -43,7 +41,6 @@ gulp.task('imagemin', ['svg'], function() {
             interlaced: true
         }))
         .pipe(gulp.dest('./assets/img/'))
-        //.pipe(connect.reload());
 });
 
 gulp.task('js', function() {
@@ -55,16 +52,21 @@ gulp.task('js', function() {
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./assets/js/'))
-        //.pipe(connect.reload());
 });
 
 gulp.task('clean', function(cb) {
     return del(['./assets/', 'bower_components/']);
 });
 
+gulp.task('copy-vendor', function () {
+    return gulp.src('_assets/vendor/**/*')
+        .pipe(gulp.dest('assets/vendor'))
+    ;
+});
+
 gulp.task('sequence', function(callback) {
     sequence(
-        ['stylus', 'imagemin', 'js'],
+        ['stylus', 'imagemin', 'js', 'copy-vendor'],
         'watch',
         callback
     );
@@ -75,26 +77,13 @@ gulp.task('watch', function() {
     gulp.watch('./_assets/img/**/*.{jpg,png,gif}', ['imagemin']).on('change', browserSync.reload);
     gulp.watch('./_assets/js/**/*.js', ['js']).on('change', browserSync.reload);
     gulp.watch('./*.html').on('change', browserSync.reload);
-    //gulp.watch('./*.html', ['reload']);
 });
 
-//gulp.task('reload', function() {
-    //gulp.src(['./assets/**/*', '*.html'])
-        //.pipe(connect.reload());
-//});
-
 gulp.task('default', ['sequence'], function() {
-    // BowserSync
     browserSync.init({
         port: 5000,
         server: {
             baseDir: "./"
         }      
     });
-    /* Gulp Connect
-    connect.server({
-        port: 8888,
-        livereload: true
-    });
-    */
 });
