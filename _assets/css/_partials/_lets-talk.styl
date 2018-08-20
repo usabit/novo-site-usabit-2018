@@ -1,0 +1,36 @@
+
+.lets-talk {
+    position: fixed;
+    top: -700px;
+    display: none;
+    width: 100%;
+    padding: 5px 0;
+    background: rgba(white, 0.9);
+    text-align: center;
+    transition: top 1000ms;
+
+    &__btn {
+        display: inline-block;
+        width: 80%;
+        height: 25px;
+        line-height: 25px;
+        color: white;
+        font-size: 11px;
+        text-transform: uppercase;
+        text-align: center;
+        background: #5798c9;
+    }
+}
+
+.lets-talk {
+    +below('mobile') {
+        display: block;
+    }
+
+    &.active {
+        +below('mobile') {
+            top: 50px;
+            transition: top 1000ms;
+        }
+    }
+}

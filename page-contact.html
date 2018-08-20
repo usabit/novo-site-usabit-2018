@@ -57,6 +57,16 @@
     </head>
     <body>
 
+        <!-- Facebook -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
         <!-- MENU -->
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol id="close" viewBox="0 0 47.971 47.971">
@@ -261,8 +271,8 @@
                     </nav>
                 </div>
             </div>
-        </header>        
-        
+        </header>
+
         <!-- Banner top -->
         <section class="section banner-top bg-image" style="background-image: url(assets/img/background/banner-header-post.jpg);">
             <div class="wrapper">
@@ -351,29 +361,66 @@
                                 </label>
                                 <textarea name="default-form-massage"></textarea>
                                 <!-- submit -->
-                                <input type="submit" class="btn blue" value="Enviar"></input>
+                                <input type="submit" class="btn blue" value="Enviar">
                             </form>
                         </div>
-                        <div class="facebook-form">
-                            <p>facebook form</p>
-                            <div
-                            class="fb-page"
-                            data-href="https://www.facebook.com/usabitdigital/"
-                            data-tabs="messages, timeline"
-                            data-small-header="false"
-                            data-adapt-container-width="true"
-                            data-hide-cover="false"
-                            data-show-facepile="true"
-                            >
-                                <div class="fb-xfbml-parse-ignore">
-                                    <blockquote cite="https://www.facebook.com/usabitdigital/"><a href="https://www.facebook.com/usabitdigital/">Usabit</a></blockquote>
-                                </div>
-                            </div>
+                        <div 
+                            class="facebook-form fb-page" 
+                            data-href="https://www.facebook.com/usabitdigital/" 
+                            data-tabs="timeline" 
+                            data-width="500"
+                            data-height="500"
+                            data-small-header="false" 
+                            data-adapt-container-width="true" 
+                            data-hide-cover="false" 
+                            data-show-facepile="true">
+                                <blockquote 
+                                    cite="https://www.facebook.com/facebook" 
+                                    class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/facebook">
+                                            Facebook
+                                        </a>
+                                </blockquote>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Scripts specific to this page -->
+        <script src="assets/vendor/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                // Phone Tooltip
+                $('.phone-tooltip').hide();
+                $('.btn-phone').on('click', function(){
+                    if($('.phone-tooltip').is(':visible')){
+                        $('.phone-tooltip').fadeOut();
+                    }else{
+                        $('.phone-tooltip').fadeIn();
+                    }
+                });
+                
+                // Show or hide contact forms
+                $(".btn-change-default-form").hide();
+                $(".facebook-form").hide();
+                //$(".default-form").hide();
+                $(".btn-change-facebook-form").on('click', function() {
+                    $(this).fadeOut();
+                    $(".default-form").fadeOut();
+                    $(".btn-change-default-form").fadeIn();
+                    $(".facebook-form").fadeIn();
+                });
+                $(".btn-change-default-form").on('click', function() {
+                    $(this).fadeOut();
+                    $(".facebook-form").fadeOut();
+                    $(".btn-change-facebook-form").fadeIn();
+                    $(".default-form").fadeIn();
+                });
+
+            });
+        </script>
 
         <!-- Contact Bar -->
         <section class="section contact-bar">
@@ -416,40 +463,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Scripts specific to this page -->
-        <script src="assets/vendor/jquery-3.3.1.min.js"></script>
-        <script>
-            $(document).ready(function(){
-
-                // Phone Tooltip
-                $('.phone-tooltip').hide();
-                $('.btn-phone').on('click', function(){
-                    if($('.phone-tooltip').is(':visible')){
-                        $('.phone-tooltip').fadeOut();
-                    }else{
-                        $('.phone-tooltip').fadeIn();
-                    }
-                });
-                
-                // Show or hide contact forms
-                $(".btn-change-default-form").hide();
-                $(".facebook-form").hide();
-                $(".btn-change-facebook-form").on('click', function() {
-                    $(this).fadeOut();
-                    $(".default-form").fadeOut();
-                    $(".btn-change-default-form").fadeIn();
-                    $(".facebook-form").fadeIn();
-                });
-                $(".btn-change-default-form").on('click', function() {
-                    $(this).fadeOut();
-                    $(".facebook-form").fadeOut();
-                    $(".btn-change-facebook-form").fadeIn();
-                    $(".default-form").fadeIn();
-                });
-
-            });
-        </script>
 
         <footer class="footer">
             <div class="wrapper">
@@ -532,6 +545,20 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Lets Talk -->
+        <section class="lets-talk">
+            <a href="page-contact.html" class="lets-talk__btn">Vamos conversar sobre o seu projeto!</a>
+        </section>
+        
+        <!-- Scoll to Top -->
+        <a href="#" class="btn-go-top">
+            <svg viewBox="1 0 16 16" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path d="M9.002,0.02 L15.695,6.325 C16.154,6.784 15.992,7.485 15.789,7.684 C15.387,8.086 14.791,8.026 14.387,7.623 L9.949,3.728 L9.947,15.042 C9.947,15.554 9.521,15.968 8.996,15.97 C8.471,15.97 8.045,15.554 8.045,15.042 L8.033,3.831 L3.762,7.685 C3.358,8.087 2.703,8.087 2.301,7.685 C1.897,7.285 1.998,6.736 2.403,6.333 L9.002,0.02 L9.002,0.02 Z" fill="#434343" class="si-glyph-fill"></path>
+                </g>
+            </svg>
+        </a>
 
         <!-- Scripts -->
         <script src="/assets/js/main.js"></script>

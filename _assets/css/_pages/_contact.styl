@@ -3,8 +3,8 @@
 // Top Title Contact
 .top-title-contact{
     background-color: white;
-    padding-top: 90px;
-    padding-bottom: 86px;
+    padding-top: 72px;
+    padding-bottom: 122px;
     .wrapper{
         p{
             font-size: 3.8rem;
@@ -35,8 +35,8 @@
 
 // Contact types
 .contact-types{
-    border: 1px solid blue;
-    margin-bottom: 150px;
+    //border: 1px solid blue;
+    margin-bottom: 155px;
     .wrapper{
         display: flex;
         align-items: stretch;
@@ -46,15 +46,18 @@
             border-right: 1px solid #E0E0E0;
             flex-basis: 50%;
             .help-and-support-list{
-                margin-top: 40px;
+                margin-top: 33px;
                 .help-and-support-item{
-                    margin-top: 30px;
+                    margin-top: 22px;
                     &:first-child{
                         margin-top: 0;    
                     }
                     a{
                         font-size: 1.6rem;
-                        font-weight: 300;  
+                        font-weight: 300;
+                        +below('mobile'){
+                            line-height: 1.4;
+                        }  
                     }
                 }
             }
@@ -63,14 +66,22 @@
                 font-weight: 700;
                 color: #828282;
                 text-transform: uppercase;
-                margin-top: 75px;
+                margin-top: 68px;
+                +below('mobile'){
+                    margin-top: 35px;
+                }
             }
             .technical-service-hours-info{
                 font-size: 1.6rem;
                 font-weight: 300;
                 color: #4F4F4F;
-                margin-top: 55px;
-                margin-bottom: 25px;  
+                margin-top: 48px;
+                margin-bottom: 22px;
+                +below('mobile'){
+                    line-height: 1.4;
+                    margin-top: 20px;
+                    margin-bottom: 22px;
+                } 
             }
             .help-and-support-phones{
                 position: relative;
@@ -90,6 +101,9 @@
                     line-height: 1.5;
                     letter-spacing: .8px;
                     transition: none;
+                    +below('mobile'){
+                        min-width: 100%;
+                    }
                     span{
                         font-weight: 700;
                         display: block;
@@ -98,6 +112,9 @@
                 button.btn.blue.btn-phone{
                     outline: none !important;
                     box-shadow: none !important;
+                    +below('mobile'){
+                        min-width: 100%;
+                    }
                 }
             }
             +below('tablet'){
@@ -105,7 +122,7 @@
                 margin-bottom: 0;
             }
             +below('mobile'){
-                margin-bottom: 44px;
+                margin-bottom: 0;
             }
             button.btn.blue.btn-phone{
 		        border: 1px solid #3BA0E5;
@@ -116,7 +133,6 @@
         .contact-forms{
             flex-basis: 50%;
             height: 750px;
-            border: 1px solid red;
             .title-and-btn-change{
                 position: relative;
                 display: flex;
@@ -126,7 +142,8 @@
                 .btn-change-default-form{
                     flex-basis: 50%;
                     +below('mobile'){
-                        flex: 1;
+                        min-width: 100%;
+                        margin-bottom: 35px;
                     }
                 }
                 .btn-change-facebook-form,
@@ -138,12 +155,8 @@
                         font-weight: 400;
                         color: #4F4F4F;
                     }
-                    +below('mobile'){
-                        margin-top: 0;
-                    }
                 }
                 .btn-change-facebook-form{
-                    //border: 1px solid blue;
                     margin-top: -2px;
                     display: flex;
                     justify-content: flex-end;
@@ -152,9 +165,8 @@
                         margin-left: 10px;
                     }
                     +below('mobile'){
-                        //justify-content: flex-start;
                         flex-direction: row-reverse;
-                        margin-top: 20px;
+                        margin-top: 60px;
                         svg {
                             margin-left: 0;
                             margin-right: 10px;
@@ -162,10 +174,12 @@
                     }
                 }
                 .btn-change-default-form{
-                    //border: 1px solid purple;
                     align-self: center;
                     text-align: right;
                     margin-top: -6px;
+                    +below('mobile'){
+                        margin-top: 70px;
+                    }
                 }
                 +below('tablet'){
                     padding-left: 0;
@@ -177,16 +191,20 @@
             .the-contact-forms{
                 position: relative;
                 width: 100%;
-                margin-top: 50px;
-                //border: 1px solid green;
-                .facebook-form,
+                margin-top: 45px;
+                .facebook-form{
+                    margin-left: 92px;
+                    +below('tablet'){
+                        margin-left: 0;
+                    }    
+                }
                 .default-form{
                     position: absolute;
                     top: 0;
                     right: 0;
                     bottom: 0;
                     left: 92px;
-                    width: calc(@width - 92px);
+                    //width: calc(@width - 92px);
                     +below('tablet'){
                         left: 0;
                         width: 100%;
@@ -195,17 +213,14 @@
                         padding-left: 0;
                     }
                 }
-                .facebook-form{
-                    //border: 1px solid blue;
-                }
                 .default-form{
                     label{
                         display: block;
                         font-size: 1.6rem;
                         font-weight: 400;
                         color: #000000;
-                        margin-top: 35px;
-                        margin-bottom: 5px;
+                        margin-top: 27px;
+                        margin-bottom: 4px;
                         &:first-child{
                             margin-top: 0;    
                         }
@@ -231,7 +246,7 @@
                         box-shadow: none;
                     }
                     input[type="submit"]{
-                        margin-top: 32px;
+                        margin-top: 31px;
                         float: right;
                     }
                     +below('mobile'){

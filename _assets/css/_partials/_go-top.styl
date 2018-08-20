@@ -1,0 +1,31 @@
+
+.btn-go-top {
+    display: none;
+
+    +below('mobile') {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: 15px;
+        bottom: -70px;
+        width: 35px;
+        height: 35px;
+        background: #f1db23;
+        border-radius: 50%;
+        z-index: 1;
+        transition: bottom 500ms;
+    }
+
+    &.active {
+        +below('mobile') {
+            bottom: 130px;
+            transition: bottom 500ms;
+        }
+    }
+
+    svg {
+        width: 20px;
+    }
+
+}
