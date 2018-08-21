@@ -3,19 +3,28 @@
 
 // Banner App
 .banner-app{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: calc(100vh - 50px);
     border: 1px solid red;
     background-attachment: fixed;
+    .banner-app-container{
+        display: flex;
+        align-items: center;
+        //max-width: 1010px;
+        width: 1010px;
+        margin: 0 auto;    
+    }
     &._1{
-        //...
+        background-image: url(../img/background/app/app-banner-1.jpg);
     }
     &._2{
-        //...
+        background-image: url(../img/background/app/app-banner-2.jpg);
     }
     &._3{
-        //...
+        background-image: url(../img/background/app/app-banner-3.jpg);
     }
     +below('small-tablet'){}    
 }
