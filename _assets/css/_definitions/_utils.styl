@@ -51,3 +51,23 @@
 	-moz-transition: all 250ms;
 	-ms-transition: all 250ms;
 }
+
+// Input Placeholder
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+/* Usage
+input
+	placeholder()
+		color red
+	OR
+	placeholder(){
+		color: red;
+	}
+*/

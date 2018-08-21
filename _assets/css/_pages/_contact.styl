@@ -213,51 +213,6 @@
                         padding-left: 0;
                     }
                 }
-                .default-form{
-                    label{
-                        display: block;
-                        font-size: 1.6rem;
-                        font-weight: 400;
-                        color: #000000;
-                        margin-top: 27px;
-                        margin-bottom: 4px;
-                        &:first-child{
-                            margin-top: 0;    
-                        }
-                    }
-                    input[type="text"],
-                    input[type="email"],
-                    textarea{
-                        background-color: #ECECEC;
-                        border: none;
-                        border-left: 3px solid #56CCF2;
-                        display: block;
-                        width: 100%;
-                        padding: 15px;
-                        outline: none;
-                        resize: none;
-                    }
-                    textarea{
-                        min-height: 250px;
-                    }
-                    input[type=text]:focus, 
-                    input[type=email]:focus,
-                    textarea:focus{
-                        box-shadow: none;
-                    }
-                    input[type="submit"]{
-                        margin-top: 31px;
-                        float: right;
-                    }
-                    +below('mobile'){
-                        textarea{
-                            min-height: 150px;
-                        }
-                        input[type="submit"]{
-                            min-width: 100%;
-                        }
-                    }
-                }
             }
             +below('tablet'){
                 margin-top: 70px;
