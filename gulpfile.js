@@ -45,7 +45,7 @@ gulp.task('imagemin', ['svg'], function() {
 
 gulp.task('js', function() {
     return gulp.src([
-            './node_modules/jquery/dist/jquery.js',
+            //'./node_modules/jquery/dist/jquery.js',
             './_assets/js/**/*.js'
         ])
         .pipe(plumber())
@@ -55,7 +55,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('clean', function(cb) {
-    return del(['./assets/', 'bower_components/']);
+    return del('./assets/');
 });
 
 gulp.task('copy-vendor', function () {

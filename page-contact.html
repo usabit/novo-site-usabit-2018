@@ -368,7 +368,7 @@
                             class="facebook-form fb-page" 
                             data-href="https://www.facebook.com/usabitdigital/" 
                             data-tabs="messages" 
-                            data-width="325"
+                            data-width="500"
                             data-small-header="false" 
                             data-adapt-container-width="true" 
                             data-hide-cover="false" 
@@ -385,40 +385,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Scripts specific to this page -->
-        <script src="assets/vendor/jquery-3.3.1.min.js"></script>
-        <script>
-            $(document).ready(function(){
-
-                // Phone Tooltip
-                $('.phone-tooltip').hide();
-                $('.btn-phone').on('click', function(){
-                    if($('.phone-tooltip').is(':visible')){
-                        $('.phone-tooltip').fadeOut();
-                    }else{
-                        $('.phone-tooltip').fadeIn();
-                    }
-                });
-                
-                // Show or hide contact forms
-                $(".btn-change-default-form").hide();
-                $(".facebook-form").hide();
-                $(".btn-change-facebook-form").on('click', function() {
-                    $(this).fadeOut();
-                    $(".default-form").fadeOut();
-                    $(".btn-change-default-form").fadeIn();
-                    $(".facebook-form").fadeIn();
-                });
-                $(".btn-change-default-form").on('click', function() {
-                    $(this).fadeOut();
-                    $(".facebook-form").fadeOut();
-                    $(".btn-change-facebook-form").fadeIn();
-                    $(".default-form").fadeIn();
-                });
-
-            });
-        </script>
 
         <!-- Contact Bar -->
         <section class="section contact-bar">
@@ -560,8 +526,47 @@
             </svg>
         </a>
 
-        <!-- Scripts -->
-        <script src="/assets/js/main.js"></script>
+        <!-- Scripts Global -->
+        <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <!-- Scripts specific to this page -->        
+        <script>
+            $(document).ready(function(){
+
+                // Phone Tooltip
+                $('.phone-tooltip').hide();
+                $('.btn-phone').on('click', function(){
+                    if($('.phone-tooltip').is(':visible')){
+                        $('.phone-tooltip').fadeOut();
+                    }else{
+                        $('.phone-tooltip').fadeIn();
+                    }
+                });
+                
+                // Show or hide contact forms
+                $(".btn-change-default-form").hide();
+                $(".facebook-form").hide();
+                $(".btn-change-facebook-form").on('click', function() {
+                    $(this).fadeOut();
+                    $(".default-form").fadeOut();
+                    $(".btn-change-default-form").fadeIn();
+                    $(".facebook-form").fadeIn();
+                });
+                $(".btn-change-default-form").on('click', function() {
+                    $(this).fadeOut();
+                    $(".facebook-form").fadeOut();
+                    $(".btn-change-facebook-form").fadeIn();
+                    $(".default-form").fadeIn();
+                });
+
+                if(window.innerWidth < 601) {
+                    //$('.facebook-form.fb-page').attr("data-width","325");
+                    $('.facebook-form.fb-page').data( "width", "325" );
+                }
+
+            });
+        </script>
 
     </body>
 </html>
