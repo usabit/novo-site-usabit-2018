@@ -1,7 +1,7 @@
 
 // Landing: APPLICATIONS
 
-// Banner App
+/* Banner App
 .banner-app{
     display: flex;
     justify-content: center;
@@ -107,5 +107,143 @@
     }
     +below('mobile'){
         height: auto;
+    }
+}
+*/
+
+// Banner App
+.stage{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+    z-index: 1;
+    .area-background,
+    .area-animate-square,
+    .area-container{
+        display: @display;
+        position: absolute;
+        //position: sticky;
+        //top: -80px;
+        width: @width;
+        height: @height;
+    }
+    .area-background{
+        z-index: 2;
+    }
+    .area-animate-square{        
+        z-index: 3;
+        .square-1,
+        .square-2{
+            background: rgba(0,0,0,.15);
+            width: 177px;
+            height: 177px;
+        }
+        .square-1{
+            margin: 20px auto 0 50px;    
+        }
+        .square-2{
+            margin: 100px auto 0 150px;
+        }
+    }
+    .area-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 4;
+        .the-container{
+            border: 1px solid blue;
+            max-width: 945px;
+            //height: 580px;
+            display: flex;
+            align-items: center;
+            .area-left{
+                border: 1px solid red;
+                position: relative;
+                width: 308px;
+                height: 586px;
+                .the-carcass,
+                .the-screen{
+                    position: absolute;
+                }
+                .the-carcass{
+                    z-index: 2;
+                    +below('mobile'){
+                        width: 250px;
+                        height: 460px;
+                        left: 40px;
+                    }    
+                }
+                .the-screen{
+                    top: 14px;
+                    left: 18px;
+                    width: 237px;
+                    height: 515px;
+                    overflow: hidden;
+                    z-index: 1;
+                    +below('mobile'){
+                        width: 195px;
+                        height: 410px;
+                    }
+                }    
+            }
+            .area-right{
+                border: 1px solid green;
+                position: relative;
+                width: 637px;
+                height: 365px;
+                .area-content{
+                    border: 1px solid yellow;
+                    position: absolute;
+                    top: 0;
+                    right: 30px;
+                    bottom: 0;
+                    left: 0;
+                    svg {
+                        width: 70px;
+                        height: 22px; 
+                        fill: none;
+                    }
+                    h2{
+                        font-size: 4rem;
+                        font-weight: 400;
+                        color: #FFFFFF;
+                        line-height: 1.3;
+                        max-width: 510px;
+                        margin-top: 35px;
+                        +below('tablet'){
+                            font-size: 2.8rem;
+                        }
+                        +below('mobile'){
+                            margin-top: 25px;
+                        }
+                    }
+                    p{
+                        font-size: 2.4rem;
+                        font-weight: 300;
+                        color: #FFFFFF;
+                        line-height: 1.2;
+                        max-width: 585px;
+                        margin-top: 35px;
+                        +below('tablet'){
+                            font-size: 2rem;
+                        }
+                        +below('mobile'){
+                            margin-top: 25px;
+                        }
+                    }
+                    a{
+                        margin-top: 35px;
+                    }
+                    +below('mobile'){
+                        margin-top: -80px;
+                        text-align: center !important;
+                    } 
+                }
+            }
+            +below('mobile'){
+                //flex-direction: column;
+            }
+        }          
     }
 }
