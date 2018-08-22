@@ -543,8 +543,11 @@
                         $('.phone-tooltip').fadeIn();
                     }
                 });
-                
+
                 // Show or hide contact forms
+                if(window.innerWidth < 601) {
+                    $('.facebook-form.fb-page').attr("data-width","325");
+                }                
                 $(".btn-change-default-form").hide();
                 $(".facebook-form").hide();
                 $(".btn-change-facebook-form").on('click', function() {
@@ -559,11 +562,6 @@
                     $(".btn-change-facebook-form").fadeIn();
                     $(".default-form").fadeIn();
                 });
-
-                if(window.innerWidth < 601) {
-                    //$('.facebook-form.fb-page').attr("data-width","325");
-                    $('.facebook-form.fb-page').data( "width", "325" );
-                }
 
             });
         </script>
