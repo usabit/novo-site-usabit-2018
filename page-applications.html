@@ -625,16 +625,35 @@
                     var bannerTop = $('.banner-top').height();
                     var bannerApp = $('.stage').height();
                     console.log(`bannerTop: ${bannerTop}`);
-                    console.log(`bannerApp: ${bannerApp}`);                        
+                    console.log(`bannerApp: ${bannerApp}`);
+
+                    $(window).on('scroll', function () {
+                        console.log( $(window).scrollTop() )
+                        
+                        // Banner App Scroll
+                        if ($(window).scrollTop() >= 250) {
+                            $('.stage').css({
+                                position: 'fixed',
+                                top: '50px'
+                            });
+                        } else if($(window).scrollTop() >= 600){
+                            $('.stage').css({
+                                position: 'relative'
+                            });
+                        }else{
+                            $('.stage').css({
+                                position: 'relative'
+                            });                            
+                        }
+                    });                       
                 }
-
-
 
                 // AOS plugin
                 AOS.init({
                     duration: 1200
                 });
             });
+
         </script>
 
     </body>
