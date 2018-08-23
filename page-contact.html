@@ -329,7 +329,7 @@
                 <div class="contact-forms">
                     <div class="title-and-btn-change">
                         <h2 class="title-template">Contato</h2>
-                        <a class="btn-change-facebook-form">
+                        <a class="btn-change-facebook-form active">
                             <span>Escreva direto pelo Facebook</span>
                             <svg width="37" height="37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 0h37v37H0z"/>
@@ -343,7 +343,7 @@
                     </div>
                     <div class="the-contact-forms">
                         <div class="default-form">
-                            <form class="" action="" method="post">
+                            <form class="" action="" method="">
                                 <label for="default-form-name">
                                     Nome
                                 </label>
@@ -548,19 +548,18 @@
                 if(window.innerWidth < 601) {
                     $('.facebook-form.fb-page').attr("data-width","325");
                 }                
-                $(".btn-change-default-form").hide();
                 $(".facebook-form").hide();
                 $(".btn-change-facebook-form").on('click', function() {
-                    $(this).fadeOut();
-                    $(".default-form").fadeOut();
-                    $(".btn-change-default-form").fadeIn();
-                    $(".facebook-form").fadeIn();
+                    $(this).removeClass('active');
+                    $(".default-form").stop().fadeOut();
+                    $(".btn-change-default-form").addClass('active');
+                    $(".facebook-form").stop().fadeIn();
                 });
                 $(".btn-change-default-form").on('click', function() {
-                    $(this).fadeOut();
-                    $(".facebook-form").fadeOut();
-                    $(".btn-change-facebook-form").fadeIn();
-                    $(".default-form").fadeIn();
+                    $(this).removeClass('active');
+                    $(".facebook-form").stop().fadeOut();
+                    $(".btn-change-facebook-form").addClass('active');
+                    $(".default-form").stop().fadeIn();
                 });
 
             });

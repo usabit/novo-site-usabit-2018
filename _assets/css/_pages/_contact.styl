@@ -124,10 +124,6 @@
             +below('mobile'){
                 margin-bottom: 0;
             }
-            button.btn.blue.btn-phone{
-		        border: 1px solid #3BA0E5;
-		        background: #3BA0E5;
-            }
         }
         // Contact Forms
         .contact-forms{
@@ -141,7 +137,7 @@
                 .btn-change-facebook-form,
                 .btn-change-default-form{
                     flex-basis: 50%;
-                    +below('mobile'){
+                    +below('tablet'){
                         min-width: 100%;
                         margin-bottom: 35px;
                     }
@@ -150,10 +146,17 @@
                 .btn-change-default-form{
                     position: absolute;
                     right: 0;
+                    opacity: 0;
+                    transition: opacity ease-in-out 400ms;
                     span{
                         font-size: 1.4rem;
                         font-weight: 400;
                         color: #4F4F4F;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                        z-index: 5;
                     }
                 }
                 .btn-change-facebook-form{
@@ -164,7 +167,7 @@
                     svg {
                         margin-left: 10px;
                     }
-                    +below('mobile'){
+                    +below('tablet'){
                         flex-direction: row-reverse;
                         margin-top: 60px;
                         svg {
@@ -177,14 +180,15 @@
                     align-self: center;
                     text-align: right;
                     margin-top: -6px;
-                    +below('mobile'){
-                        margin-top: 70px;
+                    //padding-right: 65px;
+                    +below('tablet'){
+                        flex-direction: row;
+                        text-align: left;
+                        margin-top: 69px;
                     }
                 }
                 +below('tablet'){
                     padding-left: 0;
-                }
-                +below('mobile'){
                     flex-direction: column;
                 }
             }
