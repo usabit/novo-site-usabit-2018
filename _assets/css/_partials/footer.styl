@@ -11,8 +11,23 @@
         overflow: initial;
         .footer-topic{
             column(1/5, $cycle: 5);
-            &-title{
+            +below('tablet'){
+                &:nth-child(-n+4){
+                    margin-bottom: 30px;
+                }
+                column(1/3, $cycle: 3);
+            }
+            +below('mobile'){
+                column(1, $cycle: 1);
+            }
+            .footer-topic-title{
                 height: 48px;
+                +below('tablet'){
+                    height: 50px;
+                }
+                +below('mobile'){
+                    height: 30px;
+                }
                 h2{
                     font-size: 1.4rem;
                     color: black;
@@ -20,15 +35,9 @@
                 svg {
                     transform: translateY(-40%);
                 }
-                +below('tablet'){
-                    height: 50px;
-                }
-                +below('mobile'){
-                    height: 30px;
-                }
             }
-            &-list{
-                li{
+            .footer-topic-list{
+                .footer-topic-list-item{
                     font-size: 1.4rem;
                     font-weight: 400;
                     color: black;
@@ -43,16 +52,7 @@
                     &:last-child{
                         margin-bottom: 0;
                     }
-                }    
-            }
-            +below('tablet'){
-                &:nth-child(-n+4){
-                    margin-bottom: 30px;    
                 }
-                column(1/3, $cycle: 3);
-            }
-            +below('mobile'){
-                column(1, $cycle: 1);
             }
         }
     }

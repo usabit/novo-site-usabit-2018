@@ -3,9 +3,6 @@
 
 // Banner top
 .banner-top{
-    //display: flex;
-    //justify-content: flex-start;
-    //align-items: flex-end;
     padding-top: 97px;
     padding-bottom: 22px;
     width: 100%;
@@ -14,9 +11,9 @@
         overflow: initial;
         h1,
         p,
-        ul li,
-        ul li i,
-        ul li a{
+        .banner-top-list .banner-top-list-item,
+        .banner-top-list .banner-top-list-item i,
+        .banner-top-list .banner-top-list-item a{
             font-size: 3.2rem;
             font-weight: 300;
             color: white;
@@ -24,13 +21,13 @@
                 font-size: 3rem;
             }
         }
-        ul{
+        .banner-top-list{
             display: flex;
             justify-content: flex-start;
             align-items: flex-end;
             flex-wrap: wrap;
             list-style-type: none;
-            li{
+            .banner-top-list-item{
                 margin-right: 10px;
                 // penúltimo
                 &:nth-last-of-type(-n +2):not(:last-child) a{
@@ -62,7 +59,7 @@
             margin-left: 2px;
         }
         p,
-        h2{            
+        h2{
             color: #F2F2F2;
         }
         p{
@@ -74,10 +71,8 @@
             font-weight: 300;
             font-size: 4.7rem;
         }
-    }    
+    }
 }
-// Banner Complementary ( variations )
-.banner-complementary.banner-complementary-systems{}
 
 // Banner Featured Post
 .banner-featured-post{

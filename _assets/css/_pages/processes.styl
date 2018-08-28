@@ -5,6 +5,13 @@
     background-color: white;
     padding-top: 90px;
     padding-bottom: 86px;
+    +below('tablet'){
+        padding-bottom: 70px;
+    }
+    +below('mobile'){
+        padding-top: 70px;
+        padding-bottom: 55px;
+    }
     .wrapper{
         p{
             font-size: 3.8rem;
@@ -20,18 +27,17 @@
             }
         }
     }
-    +below('tablet'){
-        padding-bottom: 70px;
-    }
-    +below('mobile'){
-        padding-top: 70px;
-        padding-bottom: 55px;
-    }
 }
 
 // The Methodologies
 .the-methodologies{
     margin-bottom: 187px;
+    +below('tablet'){
+        margin-bottom: 0;
+    }
+    +below('mobile'){
+        margin-bottom: 44px;
+    }
     .the-methodologies-list{
         margin-top: 44px;
         .methodologies-item{
@@ -43,7 +49,18 @@
             margin-top: 44px;
             padding: 45px;
             &:first-child{
-                margin-top: 0;    
+                margin-top: 0;
+            }
+            +below('tablet'){
+                display: block;
+                min-height: auto;
+                margin-top: 20px;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+            +below('mobile'){
+                padding: 25px;
             }
             .methodologies-item-type{
                 border: 3px solid #000000;
@@ -56,61 +73,42 @@
                 min-width: 365px;
                 padding: 26px;
                 margin-right: 53px;
-            }
-            .methodologies-info{
-                flex: 1;
-                padding-top: 70px;
-                .methodologies-description{
-                    font-size: 3rem;
-                    font-weight: 300;
-                    color: #000000;
-                    line-height: 1.2;
-                    margin-bottom: 27px;
-                }   
-            }
-            +below('tablet'){
-                display: block;
-                min-height: auto;
-                margin-top: 20px;
-                &:first-child{
-                    margin-top: 0;    
-                }
-                .methodologies-item-type{
+                +below('tablet'){
                     display: inline-block;
                     margin: 0 auto 35px;
                     font-size: 2.8rem;
                     letter-spacing: 4px;
                     padding: 15px;
                 }
-                .methodologies-info{
-                    display: block;   
-                    padding-top: 0;
-                    margin-bottom:0;
-                    .methodologies-description{
-                        margin: 0 auto 20px; 
-                    }
-                }
-            }
-            +below('mobile'){
-                padding: 25px;
-                .methodologies-item-type{
+                +below('mobile'){
                     min-width: 100%;
                     font-size: 2.4rem;
                     letter-spacing: 2px;
                     padding: 10px;
                 }
-                .methodologies-info{
-                    .methodologies-description{
+            }
+            .methodologies-info{
+                flex: 1;
+                padding-top: 70px;
+                +below('tablet'){
+                    display: block;
+                    padding-top: 0;
+                    margin-bottom:0;
+                }
+                .methodologies-description{
+                    font-size: 3rem;
+                    font-weight: 300;
+                    color: #000000;
+                    line-height: 1.2;
+                    margin-bottom: 27px;
+                    +below('tablet'){
+                        margin: 0 auto 20px;
+                    }
+                    +below('mobile'){
                         font-size: 2.4rem;
                     }
                 }
             }
         }
     }
-    +below('tablet'){
-        margin-bottom: 0;
-    }
-    +below('mobile'){
-        margin-bottom: 44px;
-    }    
 }

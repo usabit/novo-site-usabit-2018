@@ -5,6 +5,13 @@
     background-color: white;
     padding-top: 72px;
     padding-bottom: 122px;
+    +below('tablet'){
+        padding-bottom: 70px;
+    }
+    +below('mobile'){
+        padding-top: 70px;
+        padding-bottom: 55px;
+    }
     .wrapper{
         p{
             font-size: 3.8rem;
@@ -24,40 +31,46 @@
             }
         }
     }
-    +below('tablet'){
-        padding-bottom: 70px;
-    }
-    +below('mobile'){
-        padding-top: 70px;
-        padding-bottom: 55px;
-    }
 }
 
 // Contact types
 .contact-types{
     //border: 1px solid blue;
     margin-bottom: 155px;
+    +below('tablet'){
+        margin-bottom: 35px;
+    }
     .wrapper{
         display: flex;
         align-items: stretch;
         overflow: initial;
+        +below('tablet'){
+            flex-direction: column;
+        }
         // Help and Support
         .help-and-support{
             border-right: 1px solid #E0E0E0;
             flex-basis: 50%;
+            +below('tablet'){
+                border: none; 
+                margin-bottom: 0;
+            }
+            +below('mobile'){
+                margin-bottom: 0;
+            }
             .help-and-support-list{
                 margin-top: 33px;
                 .help-and-support-item{
                     margin-top: 22px;
                     &:first-child{
-                        margin-top: 0;    
+                        margin-top: 0;
                     }
                     a{
                         font-size: 1.6rem;
                         font-weight: 300;
                         +below('mobile'){
                             line-height: 1.4;
-                        }  
+                        }
                     }
                 }
             }
@@ -81,7 +94,7 @@
                     line-height: 1.4;
                     margin-top: 20px;
                     margin-bottom: 22px;
-                } 
+                }
             }
             .help-and-support-phones{
                 position: relative;
@@ -117,22 +130,25 @@
                     }
                 }
             }
-            +below('tablet'){
-                border: none; 
-                margin-bottom: 0;
-            }
-            +below('mobile'){
-                margin-bottom: 0;
-            }
         }
         // Contact Forms
         .contact-forms{
             flex-basis: 50%;
             height: 750px;
+            +below('tablet'){
+                margin-top: 70px;
+            }
+            +below('mobile'){
+                height: 648px;
+            }
             .title-and-btn-change{
                 position: relative;
                 display: flex;
                 padding-left: 92px;
+                +below('tablet'){
+                    padding-left: 0;
+                    flex-direction: column;
+                }
                 .title-template,
                 .btn-change-facebook-form,
                 .btn-change-default-form{
@@ -153,7 +169,6 @@
                         font-weight: 400;
                         color: #4F4F4F;
                     }
-
                     &.active {
                         opacity: 1;
                         z-index: 5;
@@ -164,13 +179,13 @@
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
-                    svg {
-                        margin-left: 10px;
-                    }
                     +below('tablet'){
                         flex-direction: row-reverse;
                         margin-top: 60px;
-                        svg {
+                    }
+                    svg {
+                        margin-left: 10px;
+                        +below('tablet'){
                             margin-left: 0;
                             margin-right: 10px;
                         }
@@ -180,16 +195,11 @@
                     align-self: center;
                     text-align: right;
                     margin-top: -6px;
-                    //padding-right: 65px;
                     +below('tablet'){
                         flex-direction: row;
                         text-align: left;
                         margin-top: 69px;
                     }
-                }
-                +below('tablet'){
-                    padding-left: 0;
-                    flex-direction: column;
                 }
             }
             .the-contact-forms{
@@ -200,7 +210,7 @@
                     margin-left: 92px;
                     +below('tablet'){
                         margin-left: 0;
-                    }    
+                    }
                 }
                 .default-form{
                     position: absolute;
@@ -208,7 +218,6 @@
                     right: 0;
                     bottom: 0;
                     left: 92px;
-                    //width: calc(@width - 92px);
                     +below('tablet'){
                         left: 0;
                         width: 100%;
@@ -218,18 +227,6 @@
                     }
                 }
             }
-            +below('tablet'){
-                margin-top: 70px;
-            }
-            +below('mobile'){
-                height: 648px;
-            }
         }
-        +below('tablet'){
-            flex-direction: column;
-        }
-    }
-    +below('tablet'){
-        margin-bottom: 35px;
     }
 }

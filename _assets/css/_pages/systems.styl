@@ -10,9 +10,26 @@
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
+            +below('small-tablet'){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 35px;
+                margin-bottom: 50px;
+            }
             .usabit-form-content-inputs{
                 margin-top: -140px;
                 margin-bottom: -60px;
+                +below('tablet'){
+                    margin-right: 0;
+                }
+                +below('small-tablet'){
+                    width: 100%;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                    order: 2;
+                }
                 h2{
                     margin-top: 10px;
                     line-height: 0;
@@ -34,10 +51,7 @@
                     font-weight: 400;
                     color: #56CCF2;
                     margin-bottom: 22px;
-                    line-height: 1.2;   
-                }
-                +below('tablet'){
-                    margin-right: 0;
+                    line-height: 1.2;
                 }
             }
             .specialists-team-content-info{
@@ -46,65 +60,53 @@
                 justify-content: center;
                 flex: 1;
                 padding-right: 20px;
+                +below('small-tablet'){
+                    width: 100%;
+                    order: 1;
+                }
                 h1,
                 p{
-                    color: #000000;                    
+                    color: #000000;
                     line-height: 1.2;
                 }
                 h1{
                     font-size: 4rem;
                     font-weight: 400;
                     max-width: 595px;
+                    +below('small-tablet'){
+                        font-size: 3rem;
+                    }
                 }
                 p{
                     font-size: 2.4rem;
                     font-weight: 300;
                     max-width: 656px;
                     margin-top: 40px;
-                }
-            }
-        }
-        +below('small-tablet'){
-            .specialists-team-content{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 35px;
-                margin-bottom: 50px;
-                .usabit-form-content-inputs{
-                    width: 100%;
-                    margin-top: 20px;
-                    margin-bottom: 0;
-                    order: 2;
-                }
-                .specialists-team-content-info{
-                    width: 100%;
-                    order: 1;
-                    h1 {
-                        font-size: 3rem;
-                    }
-                    p{                        
+                    +below('small-tablet'){
                         margin-top: 20px;
                         margin-bottom: 10px;
                     }
                 }
             }
         }
-    }    
+    }
 }
 
 // Software Decisions
 .software-decisions{
     padding-top: 145px;
     padding-bottom: 480px;
+    +below('small-tablet'){
+        padding-top: 35px;
+        padding-bottom: 40px;
+    }
     .software-decisions-title,
     .software-decisions-description,
     a.btn.submit{
         margin-left: 164px;
         +below('small-tablet'){
             margin-left: 0;
-        }  
+        }
     }
     .software-decisions-title,
     .software-decisions-description{
@@ -117,7 +119,7 @@
         max-width: 538px;
         +below('small-tablet'){
             font-size: 3rem;
-        }  
+        }
     }
     .software-decisions-description{
         font-size: 3.2rem;
@@ -129,11 +131,7 @@
             font-size: 2.4rem;
             margin-top: 28px;
             margin-bottom: 40px;
-        }  
-    }
-    +below('small-tablet'){        
-        padding-top: 35px;
-        padding-bottom: 40px;
+        }
     }
 }
 
@@ -141,13 +139,17 @@
 .testing-and-security{
     padding-top: 525px;
     padding-bottom: 525px;
+    +below('small-tablet'){
+        padding-top: 35px;
+        padding-bottom: 40px;
+    }
     .testing-and-security-title,
     .testing-and-security-description,
     a.btn.submit{
         margin-left: 164px;
         +below('small-tablet'){
             margin-left: 0;
-        }    
+        }
     }
     .testing-and-security-title,
     .testing-and-security-description{
@@ -173,9 +175,5 @@
             margin-top: 25px;
             margin-bottom: 30px;
         }
-    }
-    +below('small-tablet'){
-        padding-top: 35px;
-        padding-bottom: 40px;
     }
 }

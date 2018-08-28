@@ -1,11 +1,14 @@
 
 // More Content Theme
-.more-content-theme{    
+.more-content-theme{
     .more-content-theme-tags{
         display: flex;
         flex-wrap: wrap;
         &:last-child{
             margin-bottom: 0;
+        }
+        +below('mobile') {
+            flex-direction: column;
         }
         .category-theme-tags{
             min-width: 130px;
@@ -24,7 +27,7 @@
             li{
                 margin-right: 16px;
                 &:last-child{
-                    margin-right: 0;    
+                    margin-right: 0;
                 }
                 a{
                     color: #3BA0E5;
@@ -33,13 +36,10 @@
                 }
             }
         }
-        +below('mobile') {
-            flex-direction: column;
-        }
     }
 }
-// More Content Theme ( variations )
 
+// More Content Theme ( variations )
 .more-content-theme.more-content-theme-blog {
     .more-content-theme-tags{
         margin-top: 45px;

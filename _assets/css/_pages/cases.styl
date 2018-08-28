@@ -5,6 +5,10 @@
     .top-titles-content{
         padding: 142px 0 155px;
         text-align: center;
+        +below('mobile'){
+            font-size: 3rem;
+            padding: 100px 0;
+        }
         h2{
             font-size: 8rem;
             font-weight: 500;
@@ -28,11 +32,7 @@
                 margin-top: 30px;
             }
         }
-        +below('mobile'){
-            font-size: 3rem;
-            padding: 100px 0;
-        }
-    }    
+    }
 }
 
 // The Cases
@@ -43,29 +43,7 @@
             align-items: center;
             margin-top: 150px;
             &:first-child{
-                margin-top: 0;    
-            }
-            .cases-img{
-                margin-right: 133px;
-            } 
-            .cases-info{
-                flex: 1;
-                .cases-title,
-                .cases-description{
-                    max-width: 620px;
-                    font-size: 3rem;
-                    line-height: 1.2;
-                }
-                .cases-title{
-                    font-weight: 700;
-                    margin-top: 44px;
-                }
-                .cases-description{
-                    font-weight: 400;
-                }
-                a.btn{
-                    margin-top: 46px;
-                }    
+                margin-top: 0;
             }
             &:nth-child(even){
                 flex-direction: row-reverse;
@@ -84,24 +62,7 @@
                 display: block;
                 margin-top: 50px;
                 &:first-child{
-                    margin-top: 0;    
-                }
-                .cases-img{
-                    margin: 0 auto 30px;
-                }
-                .cases-info{
-                    display: block;
-                    text-align: center;                    
-                    .cases-logo,
-                    .cases-description{
-                        margin: 0 auto; 
-                    }
-                    .cases-title{
-                        margin: 30px auto 0;
-                    }
-                    a.btn{
-                        margin-top: 30px;
-                    }
+                    margin-top: 0;
                 }
                 &:nth-child(even){
                     .cases-img{
@@ -116,9 +77,50 @@
                         a.btn{
                             margin-top: 30px;
                         }
-                    }    
+                    }
+                }
+            }
+            .cases-img{
+                margin-right: 133px;
+                +below('tablet'){
+                    margin: 0 auto 30px;
+                }
+            } 
+            .cases-info{
+                flex: 1;
+                +below('tablet'){
+                    display: block;
+                    text-align: center;
+                }
+                .cases-logo,
+                .cases-description{
+                    +below('tablet'){
+                        margin: 0 auto;
+                    }
+                }
+                .cases-title,
+                .cases-description{
+                    max-width: 620px;
+                    font-size: 3rem;
+                    line-height: 1.2;
+                }
+                .cases-title{
+                    font-weight: 700;
+                    margin-top: 44px;
+                    +below('tablet'){
+                        margin: 30px auto 0;
+                    }
+                }
+                .cases-description{
+                    font-weight: 400;
+                }
+                a.btn{
+                    margin-top: 46px;
+                    +below('tablet'){
+                        margin-top: 30px;
+                    }
                 }
             }
         }
-    }    
+    }
 }
