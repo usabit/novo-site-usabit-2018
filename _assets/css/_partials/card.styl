@@ -25,13 +25,13 @@
                 flex-basis: calc(100%);
                 &:last-child{
                     .simple-card-box,
-                    .simple-card-box__more-about{
+                    .simple-card-box--more-about{
                         margin-bottom: 0;
                     }
                 }
             }
             .simple-card-box,
-            .simple-card-box__more-about {
+            .simple-card-box--more-about {
                 background-color: white;
                 min-height: 150px;
                 display: flex;
@@ -69,7 +69,14 @@
                     box-shadow:         inset 0 0 0 1px $primary-color;
                 }
             }
-            .simple-card-box__more-about {
+            .simple-card-box--more-about {
+                +below('small-tablet'){
+                    display: block;
+                    min-height: auto;
+                    padding: 0;
+                    margin: 0 auto;
+                    text-align: center;
+                }
                 p{
                     font-size: 1.6rem;
                     font-weight: 400;
@@ -87,19 +94,6 @@
     }
     .wrapper:first-child{
         margin-bottom: 45px;
-    }
-    .simple-card-boxes{
-        .simple-card-column{
-            .simple-card-box__more-about{
-                +below('small-tablet'){
-                    display: block;
-                    min-height: auto;
-                    padding: 0;
-                    margin: 0 auto;
-                    text-align: center;
-                }
-            }
-        }
     }
 }
 .simple-card.simple-card-blog {
